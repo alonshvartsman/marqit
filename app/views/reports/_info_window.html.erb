@@ -1,7 +1,14 @@
-<h2><%= report.category %></h2>
-<p><%= report.description %></p>
-<p><%= report.location %></p>
-<p><%= report.upvote %></p>
-<p><%= report.user_id %></p>
-<p><%= report.photo %></p>
-
+<div class="reportcard">
+  <% @reports.each do |report| %>
+  <div class="card-image">
+    <%= report.photo %></p>
+  </div>
+  <h3 class="card-name"><%= report.category %></h3>
+  <div class="card-text">
+    <p class="card-address"><span class="text-topic">Location:</span><%= report.location %></p>
+    <p class="card-cost"><span class="text-topic">Description:</span><%= report.description %></p>
+    <p class="card-cost"><span class="text-topic">Upvotes:</span><%= report.upvote %></p>
+    <p class="card-cost"><span class="text-topic">User:</span><%= report.user.first_name %></p>
+  </div>
+  <% end %>
+</div>
