@@ -9,7 +9,8 @@ class ReportsController < ApplicationController
     @markers = @reports.map do |report|
       {
         lat: report.latitude,
-        lng: report.longitude
+        lng: report.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { report: report })
       }
     end
   end
