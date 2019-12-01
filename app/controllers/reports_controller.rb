@@ -1,4 +1,8 @@
 class ReportsController < ApplicationController
+  def index
+    @reports = Report.all
+  end
+
   def create
     @report = Report.new(report_params)
     @report.user = current_user
