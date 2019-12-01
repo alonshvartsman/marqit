@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :reports
   has_many :messages
   has_many :attendances
+  mount_uploader :photo, PhotoUploader
 end
