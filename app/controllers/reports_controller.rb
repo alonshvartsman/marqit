@@ -1,10 +1,19 @@
 class ReportsController < ApplicationController
 # skip_before_action :authenticate_user!, only: [:index]
-  
+
   def index
     @reports = Report.all
+
+    @reports = Report.geocoded #returns flats with coordinates
+
+    @markers = @reports.map do |report|
+      {
+        lat: report.latitude,
+        lng: report.longitude
+      }
+    end
   end
-  
+
   def create
     @report = Report.new(report_params)
     @report.user = current_user
