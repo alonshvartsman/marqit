@@ -1,8 +1,10 @@
 class ReportsController < ApplicationController
+# skip_before_action :authenticate_user!, only: [:index]
+  
   def index
     @reports = Report.all
   end
-
+  
   def create
     @report = Report.new(report_params)
     @report.user = current_user
@@ -12,6 +14,10 @@ class ReportsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def new
+    @report = Report.new
   end
 
   def report_params
