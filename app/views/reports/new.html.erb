@@ -1,6 +1,8 @@
 <div class="new_report_container">
   <div class="new_report_row_1">
+    <%= link_to '/' do %>
     <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
+    <% end %>
     <ul class="progress_bar">
       <li class="progress_bar_1_1"></li>
       <li class="progress_bar_1_2"></li>
@@ -8,7 +10,9 @@
       <li class="progress_bar_1_2"></li>
       <li class="progress_bar_1_2"></li>
     </ul>
+    <%= link_to '/' do %>
     <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
+    <% end %>
   </div>
 
   <div class="catagory_row_2">
