@@ -1,0 +1,21 @@
+.navbar-curvy {
+  background-image: url(https://res.cloudinary.com/flameleviosa/image/upload/v1575276670/navtry_ilsfbm.png);
+  background-size: cover;
+  background-position: top;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  bottom: 0;
+  width: 100vw;
+  height: 128px;
+  padding-bottom: 29px;
+}
+
+.navbar-curvy img {
+  width: 36px;
+}
+
+.navbar-curvy h1 {
+  color: #ef6462;
+}
