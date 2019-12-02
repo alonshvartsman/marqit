@@ -1,5 +1,5 @@
 class ReportsController < ApplicationController
-# skip_before_action :authenticate_user!, only: [:index]
+  skip_before_action :authenticate_user!, only: [:index, :new]
 
   def index
     @reports = Report.all
@@ -20,6 +20,7 @@ class ReportsController < ApplicationController
     @report.user = current_user
     # authorize @report
     if @report.save
+      render 'confirmation'
       # redirect to @report, notice: 'Report was successfully created'
     else
       render :new
