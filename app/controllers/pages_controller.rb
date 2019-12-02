@@ -1,6 +1,13 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
-
-  def home
+  def dashboard
+    if current_user
+      @reports = current_user.reports
+      @events = current_user.events
+      authorize @events
+      authorize @reports
+    else
+      flash[:alert] = "You are not authorized to perform this action."
+      redirect root_path
+    end
   end
 end

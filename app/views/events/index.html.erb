@@ -1,9 +1,13 @@
-<% @events.each do |event| %>
-  <%= image_tag event.photo %>
-  <p> <%= event.description %></p>
-  <h2><%= event.name %></h2>
-  <h4><%= event.location %></h4>
-  <%= link_to 'details', event_path(event) %>
-  <%= link_to 'attend', dashboard_path %>
-  <p><%= event.date %></p>
-<% end %>
+<div class="all-events">
+  <% @events.each do |event| %>
+  <div class="all-events">
+    <%= image_tag event.photo %>
+    <p> <%= event.description %></p>
+    <h2><%= event.name %></h2>
+    <h4><%= event.location %></h4>
+    <%= link_to 'details', event_path(event) %>
+    <%= link_to 'attend', dashboard_path %>
+    <p><%= event.date %></p>
+  </div>
+  <% end %>
+</div>
