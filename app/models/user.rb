@@ -7,4 +7,14 @@ class User < ApplicationRecord
   has_many :messages
   has_many :attendances
   mount_uploader :photo, PhotoUploader
+
+
+  def default_picture
+    if self.photo.url
+      return true
+    else
+      self.remote_photo_url = "https://images.unsplash.com/photo-1461938337379-4b537cd2db74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+      self.save
+    end
+  end
 end
