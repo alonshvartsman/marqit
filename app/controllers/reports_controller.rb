@@ -1,5 +1,5 @@
 class ReportsController < ApplicationController
-# skip_before_action :authenticate_user!, only: [:index]
+  skip_before_action :authenticate_user!, only: [:index, :new]
 
   def index
     @reports = Report.all
@@ -9,7 +9,8 @@ class ReportsController < ApplicationController
     @markers = @reports.map do |report|
       {
         lat: report.latitude,
-        lng: report.longitude
+        lng: report.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { report: report })
       }
     end
   end
@@ -19,6 +20,7 @@ class ReportsController < ApplicationController
     @report.user = current_user
     # authorize @report
     if @report.save
+      render 'confirmation'
       # redirect to @report, notice: 'Report was successfully created'
     else
       render :new
