@@ -13,7 +13,7 @@
 .progress_bar_1_1 {
   height: 1.5vh;
   width: 1.5vh;
-  background-color: green;
+  background-color: #96DD3B;
   border-radius: 50%;
   margin-left: 3px;
 }
@@ -22,11 +22,61 @@
   height: 1.5vh;
   width: 1.5vh;
   margin-left: 3px;
-  background-color: grey;
+  background-color: #C4C4C4;
   border-radius: 50%;
+  margin-left: 13px;
 }
 
 .cancel_icon {
-  height: 33px;
+  height: 37px;
+  margin-top: 11px;
+  margin-right: 10px;
+}
+
+.arrow_left_icon {
+  height: 47px;
+  margin-top: 6px;
+}
+
+.round_icon {
+  width: 100px;
+  height: 100px;
+  background-color: #96DD3B;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.center_icon_text {
+  text-align: center;
+  font-weight: bold;
+}
+.catagory_row_2 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.catagory_row_3 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.catagory_row_4 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+
+.road_block_icon {
+  height: 58px;
+}
+
+.pothole_icon {
+  height: 58px;
 }
 
