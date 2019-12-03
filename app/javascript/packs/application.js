@@ -21,14 +21,3 @@ categories.forEach((category) => {
     buttonChecked.checked = true;
   });
 });
-
-// const constraints = {
-//   video: true
-// };
-
-// const takePicture = document.getElementById("snap")
-
-
-// fetch('http://localhost:3000/report', {
-
-// })

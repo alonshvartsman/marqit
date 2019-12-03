@@ -1,7 +1,7 @@
 <div class="new_report_container_page_1">
   <div class="new_report_banner">
     <%= link_to '/' do %>
-      <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
+    <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
     <% end %>
     <ul class="progress_bar">
       <li class="progress_bar_1"></li>
@@ -12,10 +12,9 @@
       <li class="progress_bar_2"></li>
     </ul>
     <%= link_to '/' do %>
-      <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
+    <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
     <% end %>
   </div>
-
   <!-- HIDDEN category field -->
   <%= simple_form_for @report do |f| %>
   <div style="display: none">
@@ -29,7 +28,6 @@
       </div>
       <p class="center_icon_text">Road Block</p>
     </div>
-
     <div class="report_category trash_can_icon" data-category="_trash_can">
       <div class="round_icon">
         <%= image_tag("icons/trash_can.png", :alt => "trash can icon", class: "trash_can_icon" ) %>
@@ -37,7 +35,6 @@
       <p class="center_icon_text">Trash</p>
     </div>
   </div>
-
   <div class="category_row">
     <div class="report_category fire_hazard_icon" data-category="_fire_hazard">
       <div class="round_icon">
@@ -45,31 +42,27 @@
       </div>
       <p class="center_icon_text">Fire Hazard</p>
     </div>
-
     <div class="report_category traffic_light_icon" data-category="_traffic_light">
       <div class="round_icon">
-          <%= image_tag("icons/traffic_light_2.png", :alt => "traffic light icon", class: "traffic_light_icon" ) %>
+        <%= image_tag("icons/traffic_light_2.png", :alt => "traffic light icon", class: "traffic_light_icon" ) %>
       </div>
       <p class="center_icon_text">Traffic Light</p>
     </div>
   </div>
-
   <div class="category_row">
     <div class="report_category sewer_leak_icon" data-category="_sewer_leak">
-       <div class="round_icon">
-          <%= image_tag("icons/sewer.png", :alt => "sewer icon", class: "sewer_icon" ) %>
-        </div>
+      <div class="round_icon">
+        <%= image_tag("icons/sewer.png", :alt => "sewer icon", class: "sewer_icon" ) %>
+      </div>
       <p class="center_icon_text">Sewer Leak</p>
     </div>
-
     <div class="report_category tear_drop_icon" data-category="_water_leak">
-       <div class="round_icon">
-          <%= image_tag("icons/tear_drop.png", :alt => "rain drop icon", class: "tear_drop_icon" ) %>
-        </div>
+      <div class="round_icon">
+        <%= image_tag("icons/tear_drop.png", :alt => "rain drop icon", class: "tear_drop_icon" ) %>
+      </div>
       <p class="center_icon_text">Water Leak</p>
     </div>
   </div>
-
   <div class="category_row">
     <div class="report_category pothole_icon" data-category="_pothole">
       <div class="round_icon">
@@ -77,7 +70,6 @@
       </div>
       <p class="center_icon_text">Pothole</p>
     </div>
-
     <div class="report_category pothole_icon" data-category="Pothole">
       <div class="round_icon">
         <%= image_tag("icons/pothole.svg", :alt => "pothole icon", class: "pothole_icon" ) %>
@@ -85,17 +77,14 @@
       <p class="center_icon_text">Pothole</p>
     </div>
   </div>
-
   <div class="next_button">
     <h3 class="next_text">Next</h3>
   </div>
-
-<!-- --------------------page 2 -->
-
+  <!-- --------------------page 2 -->
   <div class="new_report_container_page_2">
     <div class="new_report_banner">
       <%= link_to '/' do %>
-        <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
+      <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
       <% end %>
       <ul class="progress_bar">
         <li class="progress_bar_1"></li>
@@ -106,7 +95,7 @@
         <li class="progress_bar_2"></li>
       </ul>
       <%= link_to '/' do %>
-        <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
+      <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
       <% end %>
     </div>
     <div class="picture_row_1">
@@ -118,88 +107,84 @@
         <span style="display:none;">
           <%= f.input :photo, as: :file, input_html: { class: 'd-none'} %>
         </span>
-      <%= image_tag("icons/camera.svg", :alt => "camera", class: "camera_icon") %>
+        <%= image_tag("icons/camera.svg", :alt => "camera", class: "camera_icon") %>
       </label>
     </div>
-   <div class="next_button">
-     <h3 class="next_text">Next</h3>
-   </div>
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<!-- -------------------------------------page 3 -->
-
-  <div class="new_report_container_page_3">
-    <div class="new_report_banner">
-      <%= link_to '/' do %>
+    <div class="next_button">
+      <h3 class="next_text">Next</h3>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- -------------------------------------page 3 -->
+    <div class="new_report_container_page_3">
+      <div class="new_report_banner">
+        <%= link_to '/' do %>
         <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
-      <% end %>
-      <ul class="progress_bar">
-        <li class="progress_bar_1"></li>
-        <li class="progress_bar_11"></li>
-        <li class="progress_bar_11"></li>
-        <li class="progress_bar_2"></li>
-        <li class="progress_bar_2"></li>
-        <li class="progress_bar_2"></li>
-      </ul>
-      <%= link_to '/' do %>
+        <% end %>
+        <ul class="progress_bar">
+          <li class="progress_bar_1"></li>
+          <li class="progress_bar_11"></li>
+          <li class="progress_bar_11"></li>
+          <li class="progress_bar_2"></li>
+          <li class="progress_bar_2"></li>
+          <li class="progress_bar_2"></li>
+        </ul>
+        <%= link_to '/' do %>
         <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
-      <% end %>
+        <% end %>
+      </div>
+      <div class="description_row_1">
+        <h3><strong>Add Description</strong></h3>
+        <!-- <textarea rows="6" cols="40" placeholder="(optional)" class="text-box"></textarea> -->
+        <%= f.input :description, input_html: { id: 'input-description-box' }, label_html: { class: 'd-none'}, placeholder: '(optional)' %>
+      </div>
     </div>
-
-    <div class="description_row_1">
-      <h3><strong>Add Description</strong></h3>
-      <!-- <textarea rows="6" cols="40" placeholder="(optional)" class="text-box"></textarea> -->
-      <%= f.input :description, input_html: { id: 'input-description-box' }, label_html: { class: 'd-none'}, placeholder: '(optional)' %>
+    <div class="next_button">
+      <h3 class="next_text">Next</h3>
     </div>
-  </div>
-
-  <div class="next_button">
-    <h3 class="next_text">Next</h3>
-  </div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<!-- ------------------------------------page 4 -->
-
-  <div class="new_report_container_page_4">
-    <div class="new_report_banner">
-      <%= link_to '/' do %>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- ------------------------------------page 4 -->
+    <div class="new_report_container_page_4">
+      <div class="new_report_banner">
+        <%= link_to '/' do %>
         <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
-      <% end %>
-      <ul class="progress_bar">
-        <li class="progress_bar_1"></li>
-        <li class="progress_bar_11"></li>
-        <li class="progress_bar_11"></li>
-        <li class="progress_bar_11"></li>
-        <li class="progress_bar_2"></li>
-        <li class="progress_bar_2"></li>
-      </ul>
-      <%= link_to '/' do %>
+        <% end %>
+        <ul class="progress_bar">
+          <li class="progress_bar_1"></li>
+          <li class="progress_bar_11"></li>
+          <li class="progress_bar_11"></li>
+          <li class="progress_bar_11"></li>
+          <li class="progress_bar_2"></li>
+          <li class="progress_bar_2"></li>
+        </ul>
+        <%= link_to '/' do %>
         <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
-      <% end %>
+        <% end %>
+      </div>
     </div>
-  </div>
 
-  <div class="next_button">
-    <h3 class="next_text">Next</h3>
-  </div>
+    <div class="mark-map-report">
+      <div id="map"
+        style="width: 90%; height: 600px;"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+      ></div>
+    </div>
 
-<% end %>
-
+    <div class="next_button">
+      <h3 class="next_text">Next</h3>
+    </div>
+    <% end %>
 
 
 
