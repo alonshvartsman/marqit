@@ -8,8 +8,6 @@ initMapbox();
 // --------------catagory slection javaScript
 
 const categories = document.querySelectorAll(".report_category");
-console.log(categories);
-console.log("pop")
 categories.forEach((category) => {
   category.addEventListener("click", (event) => {
     categories.forEach((category) => {
@@ -17,7 +15,9 @@ categories.forEach((category) => {
     });
     event.currentTarget.classList.toggle("change_border");
     const button = event.currentTarget.dataset.category;
+    console.log(`report_category${button}`)
     const buttonChecked = document.getElementById(`report_category${button}`);
+    console.log(buttonChecked);
     buttonChecked.checked = true;
   });
 });
