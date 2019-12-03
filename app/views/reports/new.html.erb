@@ -115,8 +115,12 @@
     <h5 class="optional_section">(optional)</h5>
   </div>
   <div class="picture_row_1">
-    <%= f.input :photo, as: :file, label_html: { class: 'd-none'} %>
-    <%= image_tag("icons/camera.svg", :alt => "camera", class: "camera_icon") %>
+    <label>
+         <span style="display:none;">
+        <%= f.input :photo, as: :file, input_html: { class: 'd-none'} %>
+      </span>
+      <%= image_tag("icons/camera.svg", :alt => "camera", class: "camera_icon") %>
+    </label>
   </div>
 </div>
 
