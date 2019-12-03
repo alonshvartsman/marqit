@@ -1,0 +1,17 @@
+.nav-tabs .nav-link.active {
+  border-top: 4px solid #96DD3B;
+}
+.nav-tabs .nav-link {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+#dashboard_greeting {
+  text-align: center;
+  margin: 20px;
+}
+
+.nav-tabs {
+  display: flex;
+  justify-content: space-around;
+}
