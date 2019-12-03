@@ -42,6 +42,7 @@ user3 = User.create!(first_name: 'Lance', last_name: 'Armstrong', email: 'lance@
 EVENTNAMES = ["clean up the beach!", "coachellla", "Austin city limits", "tomorrowland", "doof", "Denim", "road side clean up", "Greenest Grass", "greta is comimg over", "Kappa 3"]
 CATEGORIES = ["road block", "fire hazard", "pot hole", "water leak", "trash", "traffic light", "sewer leak"]
 LOCATIONS = ["Ben yehuda 32, tel aviv", "arlozorov 7, tel aviv", "ben zion 25, tel aviv", "basel 10, tel aviv", "habima square, tel aviv", "gordon beach, tel aviv", "dizengoff 123, tel aviv", "alrozorov 17, tel aviv"]
+EVENT_DESCRIPTION = ["help me!"]
 
 PHOTOS =[
   "https://res.cloudinary.com/flameleviosa/image/upload/v1574869528/0404-X37-launch-Pentagon_mp1y1u.jpg",
@@ -77,17 +78,16 @@ end
 #     )
 # end
 
-# puts "creating 5 reports for user3"
-# 1.times do
-#   Report.create!(
-#     user: user3,
-#     description: EVENTNAMES.sample,
-#     location: LOCATIONS.sample,
-#     # remote_photo_url: PHOTOS.sample,
-#     upvote: 0,
-#     category: CATEGORIES.sample
-#     )
-# end
+puts "creating 5 events for user3"
+1.times do
+  Event.create!(
+    description: EVENT_DESCRIPTION.sample,
+    location: LOCATIONS.sample,
+    name: EVENTNAMES.sample,
+    date: Time.now,
+    remote_photo_url: PHOTOS.sample,
+    )
+end
 
 # puts "Making some bookings for user"
 

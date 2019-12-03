@@ -1,7 +1,8 @@
+<h1>All The Events In Your City</h1>
 <div class="all-events">
   <% @events.each do |event| %>
   <div class="all-events">
-    <%= image_tag event.photo %>
+     <%= cl_image_tag event.photo %>
     <p> <%= event.description %></p>
     <h2><%= event.name %></h2>
     <h4><%= event.location %></h4>
