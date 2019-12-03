@@ -1,5 +1,5 @@
 <div class="reportcard">
-  <% @reports.each do |report| %>
+
   <div class="card-image">
     <%= report.photo %></p>
   </div>
@@ -10,5 +10,5 @@
     <p class="card-upvotes"><span class="text-topic">Upvotes: </span><%= report.upvote %></p>
     <p class="card-user"><span class="text-topic">User: </span><%= report.user.first_name %></p>
   </div>
-  <% end %>
+
 </div>
