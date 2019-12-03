@@ -8,7 +8,7 @@ const buildMap = (longitude, latitude) => {
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v10',
     center: [34.7743034, 32.0779315],
-    zoom: 12.5,
+    zoom: 15,
     attributionControl: false
   });
 };
@@ -31,13 +31,67 @@ const fitMapToMarkers = (map, markers) => {
   map.fitBounds(bounds, { padding: 70, maxZoom: 10, duration: 1500 });
 };
 
+const addGeolocateControl = (map) => {
+  map.addControl(
+    new mapboxgl.GeolocateControl({
+      positionOptions: {
+        enableHighAccuracy: true
+      },
+    trackUserLocation: true
+    })
+  );
+}
+
 const initMapbox = () => {
   if (mapElement) {
     const map = buildMap();
-    const markers = JSON.parse(mapElement.dataset.markers);
-    addMarkersToMap(map, markers);
-    fitMapToMarkers(map, markers);
+    // uncomment this to debug the map in the console
+    // window.map = map;
+    addGeolocateControl(map)
+    if (mapElement.dataset.markers) {
+      const markers = JSON.parse(mapElement.dataset.markers);
+      addMarkersToMap(map, markers);
+      fitMapToMarkers(map, markers);
+    }
   }
 };
+//Add geolocate control to the map.
+
+//   const mapElementNumber2 = document.getElementById('map2');
+
+//   const buildMapNumber2 = (longitude, latitude) => {
+//   mapboxgl.accessToken = mapElementNumber2.dataset.mapboxApiKey;
+//     let map = new mapboxgl.Map({
+//       container: 'map2',
+//       style: 'mapbox://styles/mapbox/streets-v10',
+//       center: [34.7743034, 32.0779315],
+//       zoom: 12.5,
+//       attributionControl: false
+//   });
+
+
+
+
+
 
 export { initMapbox };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
