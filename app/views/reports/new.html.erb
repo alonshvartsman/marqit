@@ -1,31 +1,34 @@
-<div class="new_report_container">
-  <div class="new_report_row_1">
+<div class="new_report_container_page_1">
+  <div class="new_report_banner">
     <%= link_to '/' do %>
-    <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
+      <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
     <% end %>
     <ul class="progress_bar">
-      <li class="progress_bar_1_1"></li>
-      <li class="progress_bar_1_2"></li>
-      <li class="progress_bar_1_2"></li>
-      <li class="progress_bar_1_2"></li>
-      <li class="progress_bar_1_2"></li>
-      <li class="progress_bar_1_2"></li>
+      <li class="progress_bar_1"></li>
+      <li class="progress_bar_2"></li>
+      <li class="progress_bar_2"></li>
+      <li class="progress_bar_2"></li>
+      <li class="progress_bar_2"></li>
+      <li class="progress_bar_2"></li>
     </ul>
     <%= link_to '/' do %>
-    <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
+      <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
     <% end %>
   </div>
 
-<h1 class="header-category-selection">choose a category</h1>
-  <div class="catagory_row_2">
-    <div class="road_block">
+  <!-- HIDDEN category field -->
+  <%= simple_form_for @report do |f| %>
+    <%= f.input :category, collection: ["Road Block", "Trash Can", "Fire Hazard", "Traffic Light", "Sewer Leak", "Water Leak", "Pothole", "Street Light", "Extermination"], as: :radio_buttons, as: :hidden%>
+  <h3 class="header-category-selection"><strong>Select a Category</strong></h3>
+  <div class="category_row">
+    <div class="report_category road_block" data-category="_road_block">
       <div class="round_icon">
         <%= image_tag("icons/road_block.png", :alt => "road block icon", class: "road_block_icon") %>
       </div>
       <p class="center_icon_text">Road Block</p>
     </div>
 
-    <div class="trash_can_icon">
+    <div class="report_category trash_can_icon" data-category="_trash_can">
       <div class="round_icon">
         <%= image_tag("icons/trash_can.png", :alt => "trash can icon", class: "trash_can_icon" ) %>
       </div>
@@ -33,15 +36,15 @@
     </div>
   </div>
 
-  <div class="catagory_row_3">
-    <div class="fire_hazard_icon">
+  <div class="category_row">
+    <div class="report_category fire_hazard_icon" data-category="_fire_hazard">
       <div class="round_icon">
         <%= image_tag("icons/fire_hazard.png", :alt => "fire hazard icon", class: "fire_hazard_icon" ) %>
       </div>
       <p class="center_icon_text">Fire Hazard</p>
     </div>
 
-    <div class="traffic_light_icon">
+    <div class="report_category traffic_light_icon" data-category="_traffic_light">
       <div class="round_icon">
           <%= image_tag("icons/traffic_light_2.png", :alt => "traffic light icon", class: "traffic_light_icon" ) %>
       </div>
@@ -49,15 +52,15 @@
     </div>
   </div>
 
-  <div class="catagory_row_4">
-    <div class="sewer_leak_icon">
+  <div class="category_row">
+    <div class="report_category sewer_leak_icon" data-category="_sewer_leak">
        <div class="round_icon">
           <%= image_tag("icons/sewer.png", :alt => "sewer icon", class: "sewer_icon" ) %>
         </div>
       <p class="center_icon_text">Sewer Leak</p>
     </div>
 
-    <div class="tear_drop_icon">
+    <div class="report_category tear_drop_icon" data-category="_water_leak">
        <div class="round_icon">
           <%= image_tag("icons/tear_drop.png", :alt => "rain drop icon", class: "tear_drop_icon" ) %>
         </div>
@@ -65,31 +68,105 @@
     </div>
   </div>
 
-  <div class="catagory_row_4">
-    <div class="pothole_icon">
+  <div class="category_row">
+    <div class="report_category pothole_icon" data-category="_pothole">
       <div class="round_icon">
         <%= image_tag("icons/pothole.svg", :alt => "pothole icon", class: "pothole_icon" ) %>
       </div>
       <p class="center_icon_text">Pothole</p>
     </div>
 
-    <div class="pothole_icon">
+   <!--  <div class="report_category pothole_icon" data-category="Pothole">
       <div class="round_icon">
         <%= image_tag("icons/pothole.svg", :alt => "pothole icon", class: "pothole_icon" ) %>
       </div>
       <p class="center_icon_text">Pothole</p>
     </div>
+  </div> -->
+
+  <div class="next_button">
+    <h3 class="next_text">Next</h3>
+  </div>
+</div>
+
+<!-- --------------------page 2 -->
+
+<div class="new_report_container_page_2">
+  <div class="new_report_banner">
+    <%= link_to '/' do %>
+      <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
+    <% end %>
+    <ul class="progress_bar">
+      <li class="progress_bar_1"></li>
+      <li class="progress_bar_11"></li>
+      <li class="progress_bar_2"></li>
+      <li class="progress_bar_2"></li>
+      <li class="progress_bar_2"></li>
+      <li class="progress_bar_2"></li>
+    </ul>
+    <%= link_to '/' do %>
+      <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
+    <% end %>
+  </div>
+  <div class="picture_row_1">
+    <h3><strong>Add Photo</strong></h3>
+    <h5 class="optional_section">(optional)</h5>
+  </div>
+  <div class="picture_row_1" id="screenshot">
+    <button id="snap"><%= image_tag("icons/camera.svg", :alt => "camera", class: "camera_icon") %></button>
+    <% f.input :photo %>
+    <input type="file" accept="image/*" capture="user">
   </div>
 </div>
 
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- -------------------------------------page 3 -->
+
+<div class="new_report_container_page_2">
+  <div class="new_report_banner">
+    <%= link_to '/' do %>
+      <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
+    <% end %>
+    <ul class="progress_bar">
+      <li class="progress_bar_1"></li>
+      <li class="progress_bar_11"></li>
+      <li class="progress_bar_11"></li>
+      <li class="progress_bar_2"></li>
+      <li class="progress_bar_2"></li>
+      <li class="progress_bar_2"></li>
+    </ul>
+    <%= link_to '/' do %>
+      <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
+    <% end %>
+  </div>
+
+  <div class="description_row_1">
+    <h3><strong>Add Description</strong></h3>
+    <textarea rows="6" cols="40" placeholder="(optional)" class="text-box"></textarea>
+    <h3><strong>Your Photo</strong></h3>
+  </div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 
-
-
-
-
+<% end %>
 
 
 
