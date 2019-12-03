@@ -35,13 +35,14 @@ puts "creating 3 users"
 # user = User.create!(first_name: 'Ofir', last_name: 'Elboym', email: 'test@test.com', password: '123456')
 # user2 = User.create!(first_name: 'Ben', last_name: 'Aronov', email: 'ben@test.com', password: '123456')
 # TODO change this when we have user photo uploader for avatars !!!
-user = User.create!(first_name: 'Elon', last_name: 'Musk', email: 'test@test.com', password: '123456', remote_photo_url: "https://pbs.twimg.com/profile_images/378800000305778238/852d2f76797dbe1da82095f988d38fbe_400x400.png" )
-user2 = User.create!(first_name: 'Donald', last_name: 'Trump', email: 'trump@test.com', password: '123456', remote_photo_url: "https://pbs.twimg.com/profile_images/705575079258812420/cMMNr1UJ_400x400.jpg" )
-user3 = User.create!(first_name: 'Lance', last_name: 'Armstrong', email: 'lance@test.com', password: '123456', remote_photo_url: "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2005/07/24/lanceafp128ready.jpg?width=300&quality=85&auto=format&fit=max&s=3a8b55f200e6466e3ad7a9a898d11172" )
+user = User.create!(first_name: 'Elon', last_name: 'Musk', email: 'test@test.com', password: '123456')
+user2 = User.create!(first_name: 'Donald', last_name: 'Trump', email: 'trump@test.com', password: '123456')
+user3 = User.create!(first_name: 'Lance', last_name: 'Armstrong', email: 'lance@test.com', password: '123456')
 
 EVENTNAMES = ["clean up the beach!", "coachellla", "Austin city limits", "tomorrowland", "doof", "Denim", "road side clean up", "Greenest Grass", "greta is comimg over", "Kappa 3"]
 CATEGORIES = ["road block", "fire hazard", "pot hole", "water leak", "trash", "traffic light", "sewer leak"]
 LOCATIONS = ["Ben yehuda 32, tel aviv", "arlozorov 7, tel aviv", "ben zion 25, tel aviv", "basel 10, tel aviv", "habima square, tel aviv", "gordon beach, tel aviv", "dizengoff 123, tel aviv", "alrozorov 17, tel aviv"]
+EVENT_DESCRIPTION = ["help me!"]
 
 PHOTOS =[
   "https://res.cloudinary.com/flameleviosa/image/upload/v1574869528/0404-X37-launch-Pentagon_mp1y1u.jpg",
@@ -54,12 +55,12 @@ PHOTOS =[
 
 
 puts "creating 5 reports"
-15.times do
+8.times do
   Report.create!(
     user: user,
     description: EVENTNAMES.sample,
     location: LOCATIONS.sample,
-    # remote_photo_url: PHOTOS.sample,
+    remote_photo_url: PHOTOS.sample,
     upvote: 0,
     category: CATEGORIES.sample
     )
@@ -77,17 +78,16 @@ end
 #     )
 # end
 
-# puts "creating 5 reports for user3"
-# 1.times do
-#   Report.create!(
-#     user: user3,
-#     description: EVENTNAMES.sample,
-#     location: LOCATIONS.sample,
-#     # remote_photo_url: PHOTOS.sample,
-#     upvote: 0,
-#     category: CATEGORIES.sample
-#     )
-# end
+puts "creating 5 events for user3"
+1.times do
+  Event.create!(
+    description: EVENT_DESCRIPTION.sample,
+    location: LOCATIONS.sample,
+    name: EVENTNAMES.sample,
+    date: Time.now,
+    remote_photo_url: PHOTOS.sample,
+    )
+end
 
 # puts "Making some bookings for user"
 
