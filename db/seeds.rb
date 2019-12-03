@@ -31,7 +31,7 @@ puts "destroying all users"
 User.destroy_all
 
 
-puts "creating 2 users"
+puts "creating 3 users"
 # user = User.create!(first_name: 'Ofir', last_name: 'Elboym', email: 'test@test.com', password: '123456')
 # user2 = User.create!(first_name: 'Ben', last_name: 'Aronov', email: 'ben@test.com', password: '123456')
 # TODO change this when we have user photo uploader for avatars !!!
@@ -40,8 +40,8 @@ user2 = User.create!(first_name: 'Donald', last_name: 'Trump', email: 'trump@tes
 user3 = User.create!(first_name: 'Lance', last_name: 'Armstrong', email: 'lance@test.com', password: '123456', remote_photo_url: "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2005/07/24/lanceafp128ready.jpg?width=300&quality=85&auto=format&fit=max&s=3a8b55f200e6466e3ad7a9a898d11172" )
 
 EVENTNAMES = ["clean up the beach!", "coachellla", "Austin city limits", "tomorrowland", "doof", "Denim", "road side clean up", "Greenest Grass", "greta is comimg over", "Kappa 3"]
-CATEGORIES = ["road block", "fire hazzerd", "pot hole", "water leak", "trash", "traffic light", "sewer leak"]
-LOCATIONS = ["Ben yehuda 32, tel aviv", "arlozorov 7, tel aviv", "ben zion 25, tel aviv", "bazel 10, tel aviv", "habima square, tel aviv", "gordon beach, tel aviv", "trafalger square, london", "brooklyn, new york", "1 world trade center, new york"]
+CATEGORIES = ["road block", "fire hazard", "pot hole", "water leak", "trash", "traffic light", "sewer leak"]
+LOCATIONS = ["Ben yehuda 32, tel aviv", "arlozorov 7, tel aviv", "ben zion 25, tel aviv", "basel 10, tel aviv", "habima square, tel aviv", "gordon beach, tel aviv", "dizengoff 123, tel aviv", "alrozorov 17, tel aviv"]
 
 PHOTOS =[
   "https://res.cloudinary.com/flameleviosa/image/upload/v1574869528/0404-X37-launch-Pentagon_mp1y1u.jpg",
@@ -54,7 +54,7 @@ PHOTOS =[
 
 
 puts "creating 5 reports"
-5.times do
+15.times do
   Report.create!(
     user: user,
     description: EVENTNAMES.sample,
