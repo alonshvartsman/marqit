@@ -113,9 +113,9 @@
     <h5 class="optional_section">(optional)</h5>
   </div>
   <div class="picture_row_1" id="screenshot">
-   <!--  <button id="snap"><%= image_tag("icons/camera.svg", :alt => "camera", class: "camera_icon") %></button>
-    <%= f.input :photo %> -->
-    <input type="file" accept="image/*">
+    <button id="snap"><%= image_tag("icons/camera.svg", :alt => "camera", class: "camera_icon") %></button>
+    <% f.input :photo %>
+    <input type="file" accept="image/*" capture="user">
   </div>
 </div>
 
