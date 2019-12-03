@@ -119,9 +119,17 @@
     </div>
   </div>
 
-  <div class="next_button">
-    <h3 class="next_text">Next</h3>
-  </div>
+  <div class="picture_row_1">
+    <label>
+         <span style="display:none;">
+        <%= f.input :photo, as: :file, input_html: { class: 'd-none'} %>
+      </span>
+      <%= image_tag("icons/camera.svg", :alt => "camera", class: "camera_icon") %>
+    </label>
+    
+   <div class="next_button">
+     <h3 class="next_text">Next</h3>
+   </div>
 
 
 <br>
