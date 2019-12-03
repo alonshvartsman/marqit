@@ -114,8 +114,8 @@
     <h3><strong>Add Photo</strong></h3>
     <h5 class="optional_section">(optional)</h5>
   </div>
-  <div class="picture_row_1" id="screenshot">
-    <%= f.input :photo, as: :file %>
+  <div class="picture_row_1">
+    <%= f.input :photo, as: :file, label_html: { class: 'd-none'} %>
     <%= image_tag("icons/camera.svg", :alt => "camera", class: "camera_icon") %>
   </div>
 </div>
@@ -151,7 +151,8 @@
 
   <div class="description_row_1">
     <h3><strong>Add Description</strong></h3>
-    <textarea rows="6" cols="40" placeholder="(optional)" class="text-box"></textarea>
+    <!-- <textarea rows="6" cols="40" placeholder="(optional)" class="text-box"></textarea> -->
+    <%= f.input :description, input_html: { class: 'input-description-box' }, label_html: { class: 'd-none'} %>
     <h3><strong>Your Photo</strong></h3>
   </div>
 </div>
