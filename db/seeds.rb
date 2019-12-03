@@ -35,9 +35,9 @@ puts "creating 3 users"
 # user = User.create!(first_name: 'Ofir', last_name: 'Elboym', email: 'test@test.com', password: '123456')
 # user2 = User.create!(first_name: 'Ben', last_name: 'Aronov', email: 'ben@test.com', password: '123456')
 # TODO change this when we have user photo uploader for avatars !!!
-user = User.create!(first_name: 'Elon', last_name: 'Musk', email: 'test@test.com', password: '123456', remote_photo_url: "https://pbs.twimg.com/profile_images/378800000305778238/852d2f76797dbe1da82095f988d38fbe_400x400.png" )
-user2 = User.create!(first_name: 'Donald', last_name: 'Trump', email: 'trump@test.com', password: '123456', remote_photo_url: "https://pbs.twimg.com/profile_images/705575079258812420/cMMNr1UJ_400x400.jpg" )
-user3 = User.create!(first_name: 'Lance', last_name: 'Armstrong', email: 'lance@test.com', password: '123456', remote_photo_url: "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2005/07/24/lanceafp128ready.jpg?width=300&quality=85&auto=format&fit=max&s=3a8b55f200e6466e3ad7a9a898d11172" )
+user = User.create!(first_name: 'Elon', last_name: 'Musk', email: 'test@test.com', password: '123456')
+user2 = User.create!(first_name: 'Donald', last_name: 'Trump', email: 'trump@test.com', password: '123456')
+user3 = User.create!(first_name: 'Lance', last_name: 'Armstrong', email: 'lance@test.com', password: '123456')
 
 EVENTNAMES = ["clean up the beach!", "coachellla", "Austin city limits", "tomorrowland", "doof", "Denim", "road side clean up", "Greenest Grass", "greta is comimg over", "Kappa 3"]
 CATEGORIES = ["road block", "fire hazard", "pot hole", "water leak", "trash", "traffic light", "sewer leak"]
@@ -54,12 +54,12 @@ PHOTOS =[
 
 
 puts "creating 5 reports"
-15.times do
+8.times do
   Report.create!(
     user: user,
     description: EVENTNAMES.sample,
     location: LOCATIONS.sample,
-    # remote_photo_url: PHOTOS.sample,
+    remote_photo_url: PHOTOS.sample,
     upvote: 0,
     category: CATEGORIES.sample
     )

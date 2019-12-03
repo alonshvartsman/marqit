@@ -1,7 +1,25 @@
-<div class="reportcard">
+  <div class="product-card">
+    <div class="product-tumb">
+       <p><%= cl_image_tag report.photo %></p>
+    </div>
+    <div class="product-details">
+      <span class="product-catagory"><h3 class="card-category"><%= report.category %></h3></span>
+      <p class="card-description"><span class="text-topic">Description: </span><%= report.description %></p>
+      <p class="card-address"><span class="text-topic">Location: </span><%= report.location %></p>
+      <div class="product-bottom-details">
+        <div class="product-price">    <p class="card-upvotes"><span class="text-topic">Upvotes: </span><%= report.upvote %></p></div>
+        <div class="product-links">
+          <p class="card-user"><span class="text-topic">User: </span><%= report.user.first_name %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- <div class="report-card">
 
   <div class="card-image">
-    <%= report.photo %></p>
+    <%= cl_image_tag report.photo %></p>
   </div>
   <h3 class="card-category"><%= report.category %></h3>
   <div class="card-text">
@@ -11,4 +29,4 @@
     <p class="card-user"><span class="text-topic">User: </span><%= report.user.first_name %></p>
   </div>
 
-</div>
+</div> -->
