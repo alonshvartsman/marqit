@@ -31,6 +31,27 @@ class ReportsController < ApplicationController
     @report = Report.new
   end
 
+
+  # def vote_up
+  #   begin
+  #     current_user.vote_for(@report = Report.find(params[:id]))
+  #     respond_to do |format|
+  #     format.js
+  #   end
+  #   rescue ActiveRecord::RecordInvalid
+  #     redirect_to reports_path(reports: Report.all)
+  #   end
+  # end
+
+  def vote_up
+    begin
+      current_user.vote_for(@report = Report.find(params[:id]))
+      redirect_to reports_path(reports: Report.all)
+    rescue ActiveRecord::RecordInvalid
+      redirect_to reports_path(reports: Report.all)
+    end
+  end
+
   def report_params
     params.require(:report).permit(:photo, :cagtegory, :description, :location, :upvotes, :user_id, :longitude, :latitude)
   end
