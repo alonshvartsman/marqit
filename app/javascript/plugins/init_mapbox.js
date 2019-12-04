@@ -1,14 +1,15 @@
 import mapboxgl from 'mapbox-gl';
 
 const mapElement = document.getElementById('map');
+const DEFAULT_LOCATION = [34.7743034, 32.0779315];
 
 const buildMap = (longitude, latitude) => {
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
   return new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v10',
-    center: [34.7743034, 32.0779315],
     zoom: 15,
+    center: DEFAULT_LOCATION,
     attributionControl: false
   });
 };
@@ -52,25 +53,16 @@ const initMapbox = () => {
       const markers = JSON.parse(mapElement.dataset.markers);
       addMarkersToMap(map, markers);
       fitMapToMarkers(map, markers);
+    } else {
+      const marker = new mapboxgl.Marker({
+          draggable: true
+        })
+        .setLngLat(DEFAULT_LOCATION)
+        .addTo(map);
+      window.movableMapMaker = marker;
     }
   }
 };
-//Add geolocate control to the map.
-
-//   const mapElementNumber2 = document.getElementById('map2');
-
-//   const buildMapNumber2 = (longitude, latitude) => {
-//   mapboxgl.accessToken = mapElementNumber2.dataset.mapboxApiKey;
-//     let map = new mapboxgl.Map({
-//       container: 'map2',
-//       style: 'mapbox://styles/mapbox/streets-v10',
-//       center: [34.7743034, 32.0779315],
-//       zoom: 12.5,
-//       attributionControl: false
-//   });
-
-
-
 
 
 
