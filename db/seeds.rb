@@ -35,59 +35,96 @@ puts "creating 3 users"
 # user = User.create!(first_name: 'Ofir', last_name: 'Elboym', email: 'test@test.com', password: '123456')
 # user2 = User.create!(first_name: 'Ben', last_name: 'Aronov', email: 'ben@test.com', password: '123456')
 # TODO change this when we have user photo uploader for avatars !!!
-user = User.create!(first_name: 'Elon', last_name: 'Musk', email: 'test@test.com', password: '123456')
-user2 = User.create!(first_name: 'Donald', last_name: 'Trump', email: 'trump@test.com', password: '123456')
-user3 = User.create!(first_name: 'Lance', last_name: 'Armstrong', email: 'lance@test.com', password: '123456')
+alon = User.create!(first_name: 'alon', last_name: 'shvartsman', email: 'alon@shvartsman.com', password: '123456')
+noah = User.create!(first_name: 'noah', last_name: 'schlesinger', email: 'noah@schlesinger.com', password: '123456')
+ofir = User.create!(first_name: 'ofir', last_name: 'Elboym', email: 'ofir@elboym.com', password: '123456')
+omri = User.create!(first_name: 'omri', last_name: 'shabtay', email: 'omri@shabtay.com', password: '123456')
 
-EVENTNAMES = ["clean up the beach!", "coachellla", "Austin city limits", "tomorrowland", "doof", "Denim", "road side clean up", "Greenest Grass", "greta is comimg over", "Kappa 3"]
-CATEGORIES = ["road block", "fire hazard", "pot hole", "water leak", "trash", "traffic light", "sewer leak"]
+EVENTNAMES = ["Clean up the beach!", "Road side clean up!", "Climate change protest", "Save the turtles!", "Electric transportation rally", "Plant festival", "Fighting for tomorrow", "Greenest Grass", "greta is comimg over"]
+CATEGORIES = ["Road Block", "Fire Hazard", "Pot Hole", "Water Leak", "Trash Over-Flow", "Malfunctioning Taffic Light", "Sewer leak", "Other"]
 LOCATIONS = ["Ben yehuda 32, tel aviv", "arlozorov 7, tel aviv", "ben zion 25, tel aviv", "basel 10, tel aviv", "habima square, tel aviv", "gordon beach, tel aviv", "dizengoff 123, tel aviv", "alrozorov 17, tel aviv"]
-EVENT_DESCRIPTION = ["help me!"]
+EVENT_DESCRIPTION = ["Come join the fight for our Planet!"]
+REPORT_DESCRIPTION = ["Trash over-flowing", "There is a huge hole in the middle of the street", "the street light is not working", "there is sewer eveywhere!", "So many mosquitoes", "fire hydrant has blown up!"]
 
-PHOTOS =[
-  "https://res.cloudinary.com/flameleviosa/image/upload/v1574869528/0404-X37-launch-Pentagon_mp1y1u.jpg",
-  "https://res.cloudinary.com/flameleviosa/image/upload/v1574869528/maxresdefault_jojkov.jpg",
-  "https://res.cloudinary.com/flameleviosa/image/upload/v1574869528/spacex-normandy-640x353_wh80wy.jpg",
-  "https://res.cloudinary.com/flameleviosa/image/upload/v1574869529/34c47267ea04098ea12a9b9731b2a51d_tkvbtg.jpg",
-  "https://res.cloudinary.com/flameleviosa/image/upload/v1574869529/spacex-crew-dragon-spaceship-nasa-commercial-crew-program-illustration-42878298755a9670c6596o_jqwfus.jpg",
-  "https://res.cloudinary.com/flameleviosa/image/upload/v1574869530/BFR-2018-spaceship-and-booster-sep-SpaceX-1c_dlkh3x.jpg"
+EVENT_PHOTOS =[
+  "https://res.cloudinary.com/dtgrzmgus/image/upload/v1575450149/event2_zk5cik.jpg",
+  "https://res.cloudinary.com/dtgrzmgus/image/upload/v1575450149/event1_whcem1.jpg",
+  "https://res.cloudinary.com/dtgrzmgus/image/upload/v1575450149/event_3_iihsez.jpg",
+  "https://res.cloudinary.com/dtgrzmgus/image/upload/v1575450148/event_9_m4drjx.jpg",
+  "https://res.cloudinary.com/dtgrzmgus/image/upload/v1575450148/event_7_wpn7jy.jpg",
+  "https://res.cloudinary.com/dtgrzmgus/image/upload/v1575450148/event_8_krelbk.jpg",
+  "https://res.cloudinary.com/dtgrzmgus/image/upload/v1575450148/event_6_lo12pa.jpg",
+  "https://res.cloudinary.com/dtgrzmgus/image/upload/v1575450148/event_4_obqkt2.jpg",
+  "https://res.cloudinary.com/dtgrzmgus/image/upload/v1575450148/event_5_ak8jzr.jpg"
 ]
 
+REPORT_PHOTOS = [
+  "https://res.cloudinary.com/dtgrzmgus/image/upload/v1575451563/report2_tdzzre.jpg",
+  "https://res.cloudinary.com/dtgrzmgus/image/upload/v1575451563/report3_hxalpu.jpg",
+  "https://res.cloudinary.com/dtgrzmgus/image/upload/v1575451563/report5_v9jr5n.jpg",
+  "https://res.cloudinary.com/dtgrzmgus/image/upload/v1575451563/report1_ff3wkn.jpg",
+  "https://res.cloudinary.com/dtgrzmgus/image/upload/v1575451563/report4_swmx2b.jpg"
+]
 
-puts "creating 8 reports"
-8.times do
+puts "creating 3 reports for omri"
+3.times do
   Report.create!(
-    user: user,
-    description: EVENTNAMES.sample,
+    user: omri,
+    description: REPORT_DESCRIPTION.sample,
     location: LOCATIONS.sample,
-    remote_photo_url: PHOTOS.sample,
+    remote_photo_url: REPORT_PHOTOS.sample,
     upvote: 0,
     category: CATEGORIES.sample
     )
 end
 
-# puts "creating 5 reports for user2"
-# 1.times do
-#   Report.create!(
-#     user: user2,
-#     description: EVENTNAMES.sample,
-#     location: LOCATIONS.sample,
-#     # remote_photo_url: PHOTOS.sample,
-#     upvote: 0,
-#     category: CATEGORIES.sample
-#     )
-# end
+puts "creating 3 reports for ofir"
+3.times do
+  Report.create!(
+    user: ofir,
+    description: REPORT_DESCRIPTION.sample,
+    location: LOCATIONS.sample,
+    remote_photo_url: REPORT_PHOTOS.sample,
+    upvote: 0,
+    category: CATEGORIES.sample
+    )
+end
 
-# puts "creating 5 events for user3"
-# 1.times do
-#   Event.create!(
-#     description: EVENT_DESCRIPTION.sample,
-#     location: LOCATIONS.sample,
-#     name: EVENTNAMES.sample,
-#     date: Time.now,
-#     remote_photo_url: PHOTOS.sample,
-#     )
-# end
+puts "creating 3 reports for alon"
+3.times do
+  Report.create!(
+    user: alon,
+    description: REPORT_DESCRIPTION.sample,
+    location: LOCATIONS.sample,
+    remote_photo_url: REPORT_PHOTOS.sample,
+    upvote: 0,
+    category: CATEGORIES.sample
+    )
+end
+
+puts "creating 3 reports for noah"
+3.times do
+  Report.create!(
+    user: noah,
+    description: REPORT_DESCRIPTION.sample,
+    location: LOCATIONS.sample,
+    remote_photo_url: REPORT_PHOTOS.sample,
+    upvote: 0,
+    category: CATEGORIES.sample
+    )
+end
+
+puts "creating 3 events"
+3.times do
+  Event.create!(
+    description: EVENT_DESCRIPTION.sample,
+    location: LOCATIONS.sample,
+    name: EVENTNAMES.sample,
+    date: Time.now,
+    remote_photo_url: EVENT_PHOTOS.sample,
+    )
+end
+
 
 # puts "Making some bookings for user"
 
