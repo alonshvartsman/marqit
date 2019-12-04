@@ -8,7 +8,8 @@
 
 #dashboard_greeting {
   text-align: center;
-  margin: 20px;
+  margin: 20px 0px;
+  font-size: 22px;
 }
 
 .nav-tabs {
@@ -20,3 +21,14 @@
   display:flex;
   justify-content: space-between;
 }
+
+.avatar-profile {
+  display: flex;
+  justify-content: center;
+}
+
+.avatar-large {
+  width: 64px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.6);
+}
+
