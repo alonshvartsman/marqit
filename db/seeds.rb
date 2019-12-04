@@ -1,26 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-# require 'open-uri'
-# require 'nokogiri'
-# url = "https://www.secrettelaviv.com/tickets/categories/environmental"
-
-# html_file = open(url).read
-# html_doc = Nokogiri::HTML(html_file)
-
-# html_doc.search('post-content > tbody').each do |element|
-#   # event = Event.new
-#   puts element.attribute('href').value
-#   puts element
-#   # puts '************** ELEMENT HREF'
-#   # puts element.attribute('href').value
-#   # puts '************** ELEMENT SRC'
-#   # puts element.attribute('src').value
-# end
 puts "destroying all events"
 Event.destroy_all
 
@@ -31,10 +8,8 @@ puts "destroying all users"
 User.destroy_all
 
 
-puts "creating 3 users"
-# user = User.create!(first_name: 'Ofir', last_name: 'Elboym', email: 'test@test.com', password: '123456')
-# user2 = User.create!(first_name: 'Ben', last_name: 'Aronov', email: 'ben@test.com', password: '123456')
-# TODO change this when we have user photo uploader for avatars !!!
+puts "creating 4 users"
+
 alon = User.create!(first_name: 'alon', last_name: 'shvartsman', email: 'alon@shvartsman.com', password: '123456')
 noah = User.create!(first_name: 'noah', last_name: 'schlesinger', email: 'noah@schlesinger.com', password: '123456')
 ofir = User.create!(first_name: 'ofir', last_name: 'Elboym', email: 'ofir@elboym.com', password: '123456')
@@ -125,27 +100,5 @@ puts "creating 3 events"
     )
 end
 
-
-# puts "Making some bookings for user"
-
-# ofirs_ships = Spaceship.where(user: user);
-
-# 5.times do
-#   Booking.create!(
-#     user: user2,
-#     spaceship: ofirs_ships.sample,
-#     date: Date.today + ([0, 1, 10].sample)
-#     )
-
-# end
-
-# 3.times do
-#   Booking.create!(
-#     user: user,
-#     spaceship: ofirs_ships.sample,
-#     date: Date.today + ([0, 2, 14].sample)
-#     )
-
-# end
 
   puts "finished seeding!"
