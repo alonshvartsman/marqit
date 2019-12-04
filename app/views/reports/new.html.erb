@@ -179,11 +179,15 @@
         style="width: 90%; height: 600px;"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
       ></div>
+      <%= f.input :location, as: :hidden %>
+      <%= f.input :latitude, as: :hidden %>
+      <%= f.input :longitude, as: :hidden%>
     </div>
 
     <div class="next_button">
       <h3 class="next_text">Next</h3>
     </div>
+      <%= f.submit %>
     <% end %>
 
 
