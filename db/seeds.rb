@@ -54,7 +54,7 @@ PHOTOS =[
 ]
 
 
-puts "creating 5 reports"
+puts "creating 8 reports"
 8.times do
   Report.create!(
     user: user,
@@ -78,16 +78,16 @@ end
 #     )
 # end
 
-puts "creating 5 events for user3"
-1.times do
-  Event.create!(
-    description: EVENT_DESCRIPTION.sample,
-    location: LOCATIONS.sample,
-    name: EVENTNAMES.sample,
-    date: Time.now,
-    remote_photo_url: PHOTOS.sample,
-    )
-end
+# puts "creating 5 events for user3"
+# 1.times do
+#   Event.create!(
+#     description: EVENT_DESCRIPTION.sample,
+#     location: LOCATIONS.sample,
+#     name: EVENTNAMES.sample,
+#     date: Time.now,
+#     remote_photo_url: PHOTOS.sample,
+#     )
+# end
 
 # puts "Making some bookings for user"
 
