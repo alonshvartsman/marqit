@@ -10,10 +10,17 @@ User.destroy_all
 
 puts "creating 4 users"
 
+<<<<<<< Updated upstream
 alon = User.create!(first_name: 'alon', last_name: 'shvartsman', email: 'alon@shvartsman.com', password: '123456')
 noah = User.create!(first_name: 'noah', last_name: 'schlesinger', email: 'noah@schlesinger.com', password: '123456')
 ofir = User.create!(first_name: 'ofir', last_name: 'Elboym', email: 'ofir@elboym.com', password: '123456')
 omri = User.create!(first_name: 'omri', last_name: 'shabtay', email: 'omri@shabtay.com', password: '123456')
+=======
+alon = User.create!(first_name: 'alon', last_name: 'shvartsman', email: 'alon@shvartsman.com', password: '123456', remote_photo_url: 'https://res.cloudinary.com/dtgrzmgus/image/upload/v1575470200/alon_mb0qsd.jpg')
+noah = User.create!(first_name: 'noah', last_name: 'schlesinger', email: 'noah@schlesinger.com', password: '123456', remote_photo_url: 'https://res.cloudinary.com/dtgrzmgus/image/upload/v1575470200/noah_zp00ur.jpg')
+ofir = User.create!(first_name: 'ofir', last_name: 'Elboym', email: 'ofir@elboym.com', password: '123456', remote_photo_url: 'https://res.cloudinary.com/dtgrzmgus/image/upload/v1575470200/ofir_tkjaou.png')
+omri = User.create!(first_name: 'omri', last_name: 'shabtay', email: 'omri@shabtay.com', password: '123456', remote_photo_url: 'https://res.cloudinary.com/dtgrzmgus/image/upload/v1575470200/omri_fa4eoq.jpg')
+>>>>>>> Stashed changes
 
 EVENTNAMES = ["Clean up the beach!", "Road side clean up!", "Climate change protest", "Save the turtles!", "Electric transportation rally", "Plant festival", "Fighting for tomorrow", "Greenest Grass", "greta is comimg over"]
 CATEGORIES = ["Road Block", "Fire Hazard", "Pot Hole", "Water Leak", "Trash Over-Flow", "Malfunctioning Taffic Light", "Sewer leak", "Other"]

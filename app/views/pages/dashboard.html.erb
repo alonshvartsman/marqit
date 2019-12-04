@@ -7,7 +7,7 @@
   <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
   <% end %>
 </div>
-<div class="avatar-profile"><%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
+<div class="avatar-profile"> <%= cl_image_tag(current_user.photo, class: "avatar-large" ) %>
 </div>
 <h1 id="dashboard_greeting">Hello, <%= current_user.first_name %> <%= current_user.last_name %>!</h1>
 <!-- Nav tabs -->
@@ -23,13 +23,15 @@
 <!-- Tab panes -->
 <div class="tab-content">
   <div class="tab-pane active" id="reports" role="tabpanel" aria-labelledby="reports-tab">
-    <% @reports.each do |report| %>
-      <%= cl_image_tag report.photo %>
-      <p> <%= report.description %></p>
-      <h2><%= report.category %></h2>
-      <h4><%= report.upvote %></h4>
-      <h4><%= report.location %></h4>
-    <% end %>
+    <div class ="tab-style">
+      <% @reports.each do |report| %>
+        <%= cl_image_tag report.photo %>
+        <p> <%= report.description %></p>
+        <h2><%= report.category %></h2>
+        <h4><%= report.upvote %></h4>
+        <h4><%= report.location %></h4>
+      <% end %>
+    </div>
 </div>
 
   <div class="tab-pane" id="events" role="tabpanel" aria-labelledby="events-tab">
