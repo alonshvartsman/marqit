@@ -46,10 +46,10 @@ const addGeolocateControl = (map) => {
   );
 }
 
-// const onDragEnd = () => {
+const onDragEnd = () => {
    // reverse geocode
 
-// }
+}
 
 const initMapbox = () => {
   if (mapElement) {
