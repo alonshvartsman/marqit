@@ -125,6 +125,7 @@ puts "creating 3 events"
     )
 end
 
+
 # puts "Making some bookings for user"
 
 # ofirs_ships = Spaceship.where(user: user);
