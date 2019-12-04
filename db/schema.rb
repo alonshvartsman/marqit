@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_01_125724) do
+ActiveRecord::Schema.define(version: 2019_12_04_132710) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,6 +72,21 @@ ActiveRecord::Schema.define(version: 2019_12_01_125724) do
     t.string "photo"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "votes", force: :cascade do |t|
+    t.boolean "vote", default: false, null: false
+    t.string "voteable_type", null: false
+    t.bigint "voteable_id", null: false
+    t.string "voter_type"
+    t.bigint "voter_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["voteable_id", "voteable_type"], name: "index_votes_on_voteable_id_and_voteable_type"
+    t.index ["voteable_type", "voteable_id"], name: "index_votes_on_voteable_type_and_voteable_id"
+    t.index ["voter_id", "voter_type", "voteable_id", "voteable_type"], name: "fk_one_vote_per_user_per_entity", unique: true
+    t.index ["voter_id", "voter_type"], name: "index_votes_on_voter_id_and_voter_type"
+    t.index ["voter_type", "voter_id"], name: "index_votes_on_voter_type_and_voter_id"
   end
 
   add_foreign_key "attendances", "events"
