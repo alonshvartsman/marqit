@@ -1,3 +1,12 @@
+<div class="nav-icons">
+  <%= link_to '/' do %>
+  <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
+  <% end %>
+
+  <%= link_to '/' do %>
+  <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
+  <% end %>
+</div>
 <h1>All The Events In Your City</h1>
 <div class="all-events">
   <% @events.each do |event| %>

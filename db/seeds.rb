@@ -15,6 +15,7 @@ noah = User.create!(first_name: 'noah', last_name: 'schlesinger', email: 'noah@s
 ofir = User.create!(first_name: 'ofir', last_name: 'Elboym', email: 'ofir@elboym.com', password: '123456', photo: 'https://res.cloudinary.com/dtgrzmgus/image/upload/v1575470200/ofir_tkjaou.png')
 omri = User.create!(first_name: 'omri', last_name: 'shabtay', email: 'omri@shabtay.com', password: '123456', photo: 'https://res.cloudinary.com/dtgrzmgus/image/upload/v1575470200/omri_fa4eoq.jpg')
 
+
 EVENTNAMES = ["Clean up the beach!", "Road side clean up!", "Climate change protest", "Save the turtles!", "Electric transportation rally", "Plant festival", "Fighting for tomorrow", "Greenest Grass", "greta is comimg over"]
 CATEGORIES = ["Road Block", "Fire Hazard", "Pot Hole", "Water Leak", "Trash Over-Flow", "Malfunctioning Taffic Light", "Sewer leak", "Other"]
 LOCATIONS = ["Ben yehuda 32, tel aviv", "arlozorov 7, tel aviv", "ben zion 25, tel aviv", "basel 10, tel aviv", "habima square, tel aviv", "gordon beach, tel aviv", "dizengoff 123, tel aviv", "alrozorov 17, tel aviv"]
