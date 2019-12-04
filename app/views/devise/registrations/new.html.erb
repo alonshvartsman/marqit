@@ -24,6 +24,13 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+    <label>
+      <span style="display:none;">
+        <%= f.input :photo, input_html: { class: 'd-none'} %>
+        <%= f.input :photo_cache, as: :hidden %>
+      </span>
+      <%= image_tag("avatar.png", :alt => "avatar", class: "camera_icon") %>
+    </label>
   </div>
 
   <div class="form-actions">
