@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'dashboard', to: "pages#dashboard"
   root to: 'reports#index'
   resources :reports, only: %i[create new index destroy]
-  resources :events, only: %i[index show]
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :events, only: %i[index show] do
+    resources :attendances, only: %i[create]
+  end
 end
