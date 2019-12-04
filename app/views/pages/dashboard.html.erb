@@ -1,3 +1,12 @@
+<div class="nav-icons">
+  <%= link_to '/' do %>
+  <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
+  <% end %>
+
+  <%= link_to '/' do %>
+  <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
+  <% end %>
+</div>
 <h1 id="dashboard_greeting">Hello, <%= current_user.first_name %> <%= current_user.last_name %>!</h1>
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" id="myreports" role="tablist">
