@@ -1,9 +1,8 @@
 class PagesController < ApplicationController
-
   def dashboard
     if current_user
       @reports = current_user.reports
-      @events = current_user.attendances
+      @events = current_user.events
       # authorize @events
       # authorize @reports
     else

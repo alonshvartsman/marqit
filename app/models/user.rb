@@ -5,8 +5,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :reports
-  has_many :messages
-  has_many :attendances
+  has_many :messages, dependent: :destroy
+  has_many :attendances, dependent: :destroy
+  has_many :events, through: :attendances
+  has_many :messeged_events, through: :messages, source: :events
   mount_uploader :photo, PhotoUploader
 
   def default_picture

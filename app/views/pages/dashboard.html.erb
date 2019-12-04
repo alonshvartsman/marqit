@@ -1,3 +1,14 @@
+<div class="nav-icons">
+  <%= link_to '/' do %>
+  <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
+  <% end %>
+
+  <%= link_to '/' do %>
+  <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
+  <% end %>
+</div>
+<div class="avatar-profile"> <%= cl_image_tag(current_user.photo, class: "avatar-large" ) %>
+</div>
 <h1 id="dashboard_greeting">Hello, <%= current_user.first_name %> <%= current_user.last_name %>!</h1>
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" id="myreports" role="tablist">
@@ -10,26 +21,42 @@
 </ul>
 
 <!-- Tab panes -->
+
 <div class="tab-content">
   <div class="tab-pane active" id="reports" role="tabpanel" aria-labelledby="reports-tab">
-    <% @reports.each do |report| %>
-      <%= cl_image_tag report.photo %>
-      <p> <%= report.description %></p>
-      <h2><%= report.category %></h2>
-      <h4><%= report.upvote %></h4>
-      <h4><%= report.location %></h4>
-    <% end %>
+
+      <% @reports.each do |report| %>
+    <div class ="tab-style">
+      <div class="card-product">
+        <%= cl_image_tag report.photo %>
+        <div class="card-product-infos">
+          <h2> <%= report.description %></h2>
+          <p><%= report.category %></p>
+          <p><%= report.upvote %></p>
+          <p><%= report.location %></p>
+        </div>
+      </div>
+    </div>
+      <% end %>
 </div>
 
   <div class="tab-pane" id="events" role="tabpanel" aria-labelledby="events-tab">
     <% @events.each do |event| %>
-      <%= image_tag event.photo %>
-      <p> <%= event.description %></p>
-      <h2><%= event.name %></h2>
-      <h4><%= event.location %></h4>
-      <%= link_to 'details', event_path(event) %>
-      <p><%= event.date %></p>
+    <div class ="tab-style">
+      <div class="card-product">
+        <%= cl_image_tag event.photo %>
+        <div class="card-product-infos">
+          <p> <%= event.description %></p>
+          <h2><%= event.name %></h2>
+          <p><%= event.location %></p>
+          <%= link_to 'details', event_path(event) %>
+          <p><%= event.date.strftime("%d/%m/%Y") %></p>
+        </div>
+      </div>
+    </div>
     <% end %>
   </div>
 
 </div>
+
+
