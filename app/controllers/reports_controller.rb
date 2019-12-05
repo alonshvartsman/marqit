@@ -31,22 +31,14 @@ class ReportsController < ApplicationController
     @report = Report.new
   end
 
-
-  # def vote_up
-  #   begin
-  #     current_user.vote_for(@report = Report.find(params[:id]))
-  #     respond_to do |format|
-  #     format.js
-  #   end
-  #   rescue ActiveRecord::RecordInvalid
-  #     redirect_to reports_path(reports: Report.all)
-  #   end
-  # end
-
   def vote_up
     begin
       current_user.vote_for(@report = Report.find(params[:id]))
-      redirect_to reports_path(reports: Report.all)
+      respond_to do |format|
+        format.html { redirect_to reports_path }
+        format.js # <-- will render `app/views/reviews/create.js.erb`
+      end
+      # redirect_to reports_path(reports: Report.all)
     rescue ActiveRecord::RecordInvalid
       redirect_to reports_path(reports: Report.all)
     end

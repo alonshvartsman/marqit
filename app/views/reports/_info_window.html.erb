@@ -8,9 +8,9 @@
     <h3 class="card-category"><span class="product-category"><%= report.category %></span></h3>
     <p class="card-description"><span class="text-topic">Description: </span><%= report.description %></p>
     <div class="product-bottom-details">
-      <div class="product-upvote">Upvotes: <%= report.votes.count %></div>
-      <div class="upvotemachine"><%= link_to vote_up_report_path(report), :method => :post do %></div>
-        <i class="fa fa-thumbs-up" id="thumbsup"></i>
+      <div class="product-upvote" data-report-id="<%= report.id %>" >Upvotes: <%= report.votes.count %></div>
+      <div class="upvotemachine"><%= link_to vote_up_report_path(report), :method => :post, remote: true do %></div>
+        <i class="fa fa-thumbs-up fa-3x like" aria-hidden="true"></i>
         <% end %>
       <div class="product-links">
       </div>
