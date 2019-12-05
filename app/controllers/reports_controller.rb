@@ -1,5 +1,5 @@
 class ReportsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :new]
+  skip_before_action :authenticate_user!, only: [:index]
 
   def index
     @reports = Report.all
