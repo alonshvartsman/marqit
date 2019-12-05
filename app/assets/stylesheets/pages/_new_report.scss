@@ -58,16 +58,33 @@
   margin-top: 6px;
 }
 
-//------------------------------------- next
+//------------------------------------- next/create button
 
 .next_button {
-  margin-top: 80px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 .next_text {
   text-align:center;
   background-color: #96DD3B;
-  padding: 5px;
+  padding: 9px 60px;
+  border-radius: 5px;
+}
+
+.create_button_div {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display:flex;
+  justify-content:center;
+}
+
+.create_button {
+  text-align:center;
+  background-color: #96DD3B;
+  padding: 9px 60px;
+  border-radius: 5px;
 }
 // ------------------------------------ page 1
 
