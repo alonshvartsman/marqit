@@ -1,4 +1,5 @@
 class Event < ApplicationRecord
+  after_create :default_picture
   has_many :attendances, dependent: :destroy
   has_many :messages, dependent: :destroy
   has_many :users, through: :attendances
@@ -9,7 +10,7 @@ class Event < ApplicationRecord
     if self.photo.url
       return true
     else
-      self.remote_photo_url = "https://images.unsplash.com/photo-1556861466-fa5294c7d285?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=<80></80>"
+      self.photo = File.open(File.join(".", "app/assets/images/green-tel -aviv.jpeg"))
       self.save
     end
   end

@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   acts_as_voter
+  after_create :default_picture
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -15,7 +16,7 @@ class User < ApplicationRecord
     if self.photo.url
       return true
     else
-      self.remote_photo_url = "https://images.unsplash.com/photo-1461938337379-4b537cd2db74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+      self.photo = File.open(File.join(".", "app/assets/images/avatar.png"))
       self.save
     end
   end
