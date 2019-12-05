@@ -18,63 +18,63 @@
   <!-- HIDDEN category field -->
   <%= simple_form_for @report do |f| %>
   <div style="display: none">
-    <%= f.input :category, collection: ["Road Block", "Trash Can", "Fire Hazard", "Traffic Light", "Sewer Leak", "Water Leak", "Pothole", "Street Light", "Extermination"], as: :radio_buttons%>
+    <%= f.input :category, collection: ["Road Block", "Trash", "Traffic Light", "Sewage", "Water Leak", "Exterminate", "Pothole", "Street Light", "Power Line", "other", "Fire Hazard"], as: :radio_buttons%>
   </div>
   <h3 class="header-category-selection"><strong>Select a Category</strong></h3>
   <div class="category_row">
-    <div class="report_category road_block" data-category="_road_block">
+    <div class="report_category pothole_icon" data-category="_pothole">
       <div class="round_icon">
-        <%= image_tag("icons/road_block.png", :alt => "road block icon", class: "road_block_icon") %>
+        <%= image_tag("icons/pothole.svg", :alt => "pothole icon", class: "pothole_icon white" ) %>
       </div>
-      <p class="center_icon_text">Road Block</p>
+      <p class="center_icon_text">Pothole</p>
     </div>
-    <div class="report_category trash_can_icon" data-category="_trash_can">
+    <div class="report_category trash_can_icon" data-category="_trash">
       <div class="round_icon">
-        <%= image_tag("icons/trash_can.png", :alt => "trash can icon", class: "trash_can_icon" ) %>
+        <%= image_tag("icons/trash_can.png", :alt => "trash can icon", class: "trash_can_icon white" ) %>
       </div>
       <p class="center_icon_text">Trash</p>
     </div>
   </div>
   <div class="category_row">
-    <div class="report_category fire_hazard_icon" data-category="_fire_hazard">
+    <div class="report_category street_light_icon" data-category="_street_light">
       <div class="round_icon">
-        <%= image_tag("icons/fire_hazard.png", :alt => "fire hazard icon", class: "fire_hazard_icon" ) %>
+        <%= image_tag("icons/broken_light.png", :alt => "Street Light", class: "street_light white" ) %>
       </div>
-      <p class="center_icon_text">Fire Hazard</p>
+      <p class="center_icon_text">Street Light</p>
     </div>
     <div class="report_category traffic_light_icon" data-category="_traffic_light">
       <div class="round_icon">
-        <%= image_tag("icons/traffic_light_2.png", :alt => "traffic light icon", class: "traffic_light_icon" ) %>
+        <%= image_tag("icons/traffic_light_2.png", :alt => "traffic light icon", class: "traffic_light_icon white" ) %>
       </div>
       <p class="center_icon_text">Traffic Light</p>
     </div>
   </div>
   <div class="category_row">
-    <div class="report_category sewer_leak_icon" data-category="_sewer_leak">
+    <div class="report_category exterminate_icon" data-category="_exterminate">
       <div class="round_icon">
-        <%= image_tag("icons/sewer.png", :alt => "sewer icon", class: "sewer_icon" ) %>
+        <%= image_tag("icons/rat.png", :alt => "exterminate icon", class: "exterminate_icon white" ) %>
       </div>
-      <p class="center_icon_text">Sewer Leak</p>
+      <p class="center_icon_text">Extermination</p>
     </div>
-    <div class="report_category tear_drop_icon" data-category="_water_leak">
+    <div class="report_category road_block" data-category="_road_block">
       <div class="round_icon">
-        <%= image_tag("icons/tear_drop.png", :alt => "rain drop icon", class: "tear_drop_icon" ) %>
+        <%= image_tag("icons/road_block.png", :alt => "road block icon", class: "road_block_icon white") %>
       </div>
-      <p class="center_icon_text">Water Leak</p>
+      <p class="center_icon_text">Road Block</p>
     </div>
   </div>
   <div class="category_row">
-    <div class="report_category pothole_icon" data-category="_pothole">
+    <div class="report_category sewer_leak_icon" data-category="_sewage">
       <div class="round_icon">
-        <%= image_tag("icons/pothole.svg", :alt => "pothole icon", class: "pothole_icon" ) %>
+        <%= image_tag("icons/sewer.png", :alt => "sewer icon", class: "sewer_icon white" ) %>
       </div>
-      <p class="center_icon_text">Pothole</p>
+      <p class="center_icon_text">Sewage</p>
     </div>
-    <div class="report_category pothole_icon" data-category="Pothole">
+    <div class="report_category other_icon" data-category="_other">
       <div class="round_icon">
-        <%= image_tag("icons/pothole.svg", :alt => "pothole icon", class: "pothole_icon" ) %>
+        <%= image_tag("icons/other.png", :alt => "other icon", class: "other_icon white" ) %>
       </div>
-      <p class="center_icon_text">Pothole</p>
+      <p class="center_icon_text">Fire Hazard</p>
     </div>
   </div>
   <div class="next_button">
@@ -84,7 +84,7 @@
   <div class="new_report_container_page_2">
     <div class="new_report_banner">
       <%= link_to '/' do %>
-      <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
+      <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon white") %>
       <% end %>
       <ul class="progress_bar">
         <li class="progress_bar_1"></li>
