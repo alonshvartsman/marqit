@@ -1,7 +1,13 @@
 .change_border {
-  border: solid;
-  border-width: 5px;
-  border-color: black;
+  .round_icon {
+  background-color: #87c635;
+  transition: background-color .3s;
+  border-radius: 50%;
+    .white {
+      filter: invert(50%);
+      transition: .5s;
+    }
+  }
 }
 //----------------------------------header
 
@@ -98,6 +104,22 @@
 .header-category-selection{
   text-align:center;
   margin-bottom: 21px;
+}
+
+.street_light {
+  height:69px;
+}
+
+.exterminate_icon {
+    height: 42px;
+}
+
+.other_icon {
+  height: 70px;
+}
+
+.report_category {
+  padding: 5px;
 }
 
 // ------------------------------------ page 2
