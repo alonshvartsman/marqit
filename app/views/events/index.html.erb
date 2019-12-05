@@ -11,6 +11,7 @@
 <h1 id="events-title">All The Events In Your City</h1>
 <div class="all-events">
   <% @events.each do |event| %>
+  <%= link_to event_path(event) do %>
   <div class ="tab-style">
     <div class="card-product">
        <%= cl_image_tag event.photo %>
@@ -18,11 +19,11 @@
         <h2> <%= event.description %></h2>
         <p><%= event.name %></p>
         <p><%= event.location %></p>
-        <%= link_to 'details', event_path(event) %>
         <p><%= event.date.strftime("%d/%m/%Y") %></p>
       </div>
     </div>
  </div>
+  <% end %>
   <% end %>
 </div>
 
