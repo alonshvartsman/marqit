@@ -1,21 +1,27 @@
 
 function upvote() {
 
+  const voteId = <%= @report.id %>;
 
+  const counter = document.querySelector(`.product-upvote[data-report-id="${voteId}"]`);
 
-const voteid = <%= @report.id %>;
+  // take how many likes
 
-const counter = document.querySelector(`.product-upvote[data-report-id="${voteid}"]`)
+  //parse to int
 
-// take how many likes
+  // + 1
 
-//parse to int
+  // update the div innertEXT
 
-// + 1
+  const totalVotes = <%= @report.votes.count %>;
+  const countSpan = document.querySelector(`span[data-report-id="${voteId}"]`)
+  countSpan.innerText = totalVotes;
 
-// update the div innertEXT
+  // remove 'can-vote' class from thumb element
+  // const voteThumb = document.querySelector(`.product-details[data-report-id="${voteId}"] .can-vote`);
+  // voteThumb.classList.remove('can-vote');
 
-counter.innerText = "voted"
+  // counter.innerText = "voted"
 }
 
 upvote()
