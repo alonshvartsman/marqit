@@ -99,20 +99,20 @@ i#thumbsup {
   font-size: 24px;
   float: right;
 }
-
-.like,
+////////Like Button////////////
+.like
 {
   display: inline-block;
   cursor: pointer;
   margin: 10px;
-}
 
-.like:hover {
-  color: #2EBDD1;
-  transition: all .2s ease-in-out;
-  transform: scale(1.1);
-}
+  &.can-vote:hover {
+    color: #2EBDD1;
+    transition: all .2s ease-in-out;
+    transform: scale(1.1);
+  }
 
-.active {
-  color: #2EBDD1;
+  &.can-vote.active {
+    color: #2EBDD1;
+  }
 }
