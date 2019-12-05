@@ -32,6 +32,15 @@ class Report < ApplicationRecord
       when "Pothole"
         self.photo = File.open(base_path + 'pothole.svg')
         self.save
+      when "other"
+        self.photo = File.open(base_path + 'other.png')
+        self.save
+      when "Street Light"
+        self.photo = File.open(base_path + 'broken_light.png')
+        self.save
+      when "Exterminate"
+        self.photo = File.open(base_path + 'rat.png')
+        self.save
       end
     end
   end
