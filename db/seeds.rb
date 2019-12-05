@@ -39,7 +39,6 @@ REPORT_PHOTOS = [
   "https://res.cloudinary.com/dtgrzmgus/image/upload/v1575451563/report3_hxalpu.jpg",
   "https://res.cloudinary.com/dtgrzmgus/image/upload/v1575451563/report5_v9jr5n.jpg",
   "https://res.cloudinary.com/dtgrzmgus/image/upload/v1575451563/report1_ff3wkn.jpg",
-  "https://res.cloudinary.com/dtgrzmgus/image/upload/v1575451563/report4_swmx2b.jpg"
 ]
 
 
