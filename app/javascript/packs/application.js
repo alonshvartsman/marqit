@@ -16,9 +16,7 @@ categories.forEach((category) => {
     });
     event.currentTarget.classList.toggle("change_border");
     const button = event.currentTarget.dataset.category;
-    console.log(`report_category${button}`)
     const buttonChecked = document.getElementById(`report_category${button}`);
-    console.log(buttonChecked);
     buttonChecked.checked = true;
   });
 });
