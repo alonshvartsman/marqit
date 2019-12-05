@@ -53,6 +53,6 @@ class ReportsController < ApplicationController
   end
 
   def report_params
-    params.require(:report).permit(:photo, :cagtegory, :description, :location, :upvotes, :user_id, :longitude, :latitude)
+    params.require(:report).permit(:photo, :category, :description, :location, :upvotes, :user_id, :longitude, :latitude)
   end
 end
