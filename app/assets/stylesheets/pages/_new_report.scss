@@ -1,11 +1,10 @@
 .change_border {
   .round_icon {
   background-color: #87c635;
-  transition: background-color .3s;
+  transition: background-color .1s;
   border-radius: 50%;
     .white {
-      filter: invert(50%);
-      transition: .5s;
+      filter: invert(100%);
     }
   }
 }
@@ -88,22 +87,43 @@
 }
 // ------------------------------------ page 1
 
+*, *::before, *::after {
+    box-sizing: content-box;
+}
 
 .round_icon {
-  width: 100px;
-  height: 100px;
-  background-color: #96DD3B;
+  width: 70px;
+  height: 70px;
   padding: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-radius: 50%;
 }
+
+.round_icon {
+      border-radius: 50%;
+      border: solid 2px #87c635;
+    }
+
+    .round_icon:after{
+      display: block;
+      font-size: 30px;
+      height: 30px;
+      text-decoration: none;
+      width: 30px;
+    }
+
+    .round_icon:active{
+      // box-shadow: 0 2px 5px 0 #87c635;
+      // border: solid 2px #87c635;
+    }
+
 
 .center_icon_text {
   text-align: center;
   font-weight: bold;
 }
+
 .category_row {
   display: flex;
   justify-content: space-around;
@@ -111,11 +131,11 @@
 }
 
 .road_block_icon {
-  height: 58px;
+  height: 48px;
 }
 
 .pothole_icon {
-  height: 58px;
+  height: 48px;
 }
 
 .header-category-selection{
@@ -124,15 +144,19 @@
 }
 
 .street_light {
-  height:69px;
+  height: 48px;
 }
 
 .exterminate_icon {
-    height: 42px;
+  height: 36px;
 }
 
 .other_icon {
-  height: 70px;
+  height: 48px;
+}
+
+img.trash_can_icon.white {
+  height: 48px;
 }
 
 .report_category {
