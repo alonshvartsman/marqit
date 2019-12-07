@@ -74,11 +74,11 @@
       <div class="round_icon">
         <%= image_tag("icons/other.png", :alt => "other icon", class: "other_icon white" ) %>
       </div>
-      <p class="center_icon_text">Fire Hazard</p>
+      <p class="center_icon_text">Other</p>
     </div>
   </div>
   <div class="next_button">
-    <h3 class="next_text">Next</h3>
+    <h3><span class="next_text">Next</span></h3>
   </div>
   <!-- --------------------page 2 -->
   <div class="new_report_container_page_2">
@@ -120,6 +120,12 @@
     <br>
     <br>
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
     <!-- -------------------------------------page 3 -->
     <div class="new_report_container_page_3">
       <div class="new_report_banner">
@@ -154,6 +160,11 @@
     <br>
     <br>
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
     <!-- ------------------------------------page 4 -->
     <div class="new_report_container_page_4">
       <div class="new_report_banner">
@@ -183,12 +194,10 @@
       <%= f.input :latitude, as: :hidden %>
       <%= f.input :longitude, as: :hidden%>
     </div>
-
-    <div class="next_button">
-      <h3 class="next_text">Next</h3>
+    <div class="create_button_div">
+      <%= f.submit class: "create_button" %>
     </div>
-      <%= f.submit %>
-    <% end %>
+  <% end %>
 
 
 
