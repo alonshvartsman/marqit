@@ -70,6 +70,7 @@ p.card-address {
     line-height: 22px;
     margin-bottom: 8px;
     color: #999;
+    position: relative;
 }
 
 .product-bottom-details {
@@ -115,4 +116,16 @@ i#thumbsup {
   &.can-vote.active {
     color: #2EBDD1;
   }
+}
+
+.icon_image_popup {
+  height: 35px;
+  width: 35px;
+  // border: solid;
+  // border-color: black;
+  // border-width: 1px;
+  // filter: invert(100%);
+  position: absolute;
+  top: 12px;
+  left: 12px;
 }
