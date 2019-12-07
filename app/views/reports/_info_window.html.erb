@@ -1,11 +1,34 @@
   <div class="product-card">
     <div class="product-tumb">
-     <p><%= cl_image_tag report.photo %></p>
+     <p><%= cl_image_tag report.photo%></p>
    </div>
+
 
    <div class="product-details" data-report-id="<%= report.id %>">
     <p class="card-address"><span class="text-topic"></span><%= report.location %></p>
+    <div class="category-flex">
     <h3 class="card-category"><span class="product-category"><%= report.category %></span></h3>
+    <%= case report.category
+      when "Road Block"
+        image_tag("icons/road_block.png", class: "icon_image_popup")
+      when "Trash"
+        image_tag('icons/trash_can.png', class: "icon_image_popup")
+      when "Traffic Light"
+        image_tag('icons/traffic_light_2.png', class: "icon_image_popup")
+      when "Sewage"
+        image_tag('icons/sewer.png', class: "icon_image_popup")
+      when "Water Leak"
+        image_tag('icons/tear_drop.png', class: "icon_image_popup")
+      when "Pothole"
+        image_tag('icons/pothole.svg', class: "icon_image_popup")
+      when "other"
+        image_tag('icons/other.png', class: "icon_image_popup")
+      when "Street Light"
+        image_tag('icons/broken_light.png', class: "icon_image_popup")
+      when "Exterminate"
+        image_tag('icons/rat.png', class: "icon_image_popup")
+      end %>
+      </div>
     <p class="card-description"><span class="text-topic">Description: </span><%= report.description %></p>
     <div class="product-bottom-details">
       <div class="product-upvote" data-report-id="<%= report.id %>" >

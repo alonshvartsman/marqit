@@ -1,9 +1,13 @@
-<div class="confirmation-text">
+<div class="confirmation-container">
   <div class="confirmation-body">
-    <h1>Thank You!</h1>
-    <h3>your report has been submitted</h3>
-    <%= image_tag 'world.svg'%>
-    <h5>view the status of your report from</h5>
-    <%= link_to "Back To Home", root_path %>
+    <h1 class="confirmation-header">Thank You!</h1>
+    <h4 class="confimation-sub-header">Your report has been submitted</h4>
+    <%= image_tag 'world.svg', class: 'confirmation-img' %>
+    <div class="confirmation-text-div">
+      <h5 class="confirmation-text">Track the status of your report from your profile page</h5>
+    </div>
+    <div class="confirmation-button-div">
+      <%= link_to "Back To Home", root_path, class: 'confirmation-button' %>
+    </div>
   </div>
 </div>

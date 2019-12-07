@@ -51,7 +51,7 @@ p.card-address {
     font-weight: 700;
     text-transform: uppercase;
     color: #ccc;
-    margin-bottom: 8px;
+
 }
 
 .product-details h3 {
@@ -69,6 +69,7 @@ p.card-address {
     line-height: 22px;
     margin-bottom: 8px;
     color: #999;
+    position: relative;
 }
 
 .product-bottom-details {
@@ -114,4 +115,15 @@ i#thumbsup {
   &.can-vote.active {
     color: #2EBDD1;
   }
+}
+
+.icon_image_popup {
+  height: 35px;
+  width: 40px;
+
+}
+
+.category-flex{
+  display: flex;
+  justify-content: space-around;
 }
