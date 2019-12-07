@@ -1,4 +1,4 @@
-.confirmation-text{
+.confirmation-container{
   width: 100%;
   margin: auto;
   text-align: center;
@@ -6,4 +6,74 @@
 .confirmation-body{
   display: flex;
   flex-direction: column;
+  margin-top: 108px;
 }
+
+.confirmation-header {
+  font-weight: bold;
+}
+
+.confimation-sub-header {
+  margin-top: 10px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.confirmation-img {
+  height: 185px;
+  margin-top: 30px;
+}
+.confirmation-text-div{
+  display: flex;
+  justify-content: center;
+}
+
+.confirmation-text {
+  margin-top: 30px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.confirmation-button-div {
+ margin-top: 106px;
+}
+
+.confirmation-button {
+  text-align: center;
+  background-color: #96DD3B;
+  padding: 20px 60px;
+  width: 270px;
+  border-radius: 5px;
+  margin: auto;
+  color: white !important;
+  font-size: 19px;
+  font-weight: bold;
+   display:flex;
+  justify-content:center;
+}
+
+.confirmation-button:after {
+  box-shadow: 1px 1px 1px white;
+}
+
+.confirmation-button:active {
+  background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
