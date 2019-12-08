@@ -8,7 +8,18 @@
     }
   }
 }
+
+
+ // -----------------------------Font
+// @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+// h1, h2, h3, p, a {
+// font-family:'Source Sans Pro';
+// }
+
 //----------------------------------header
+
+
 
 .new_report_banner {
   display: flex;
@@ -232,8 +243,14 @@ img.trash_can_icon.white {
 .mark-map-report {
   display: flex;
   justify-content: space-around;
+  margin: auto;
+  justify-content: center;
 }
 
+#map {
+  height: 530px;
+  margin-top: 138px;
+}
 
 
 
