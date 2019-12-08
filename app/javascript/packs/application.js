@@ -20,3 +20,4 @@ categories.forEach((category) => {
     buttonChecked.checked = true;
   });
 });
+

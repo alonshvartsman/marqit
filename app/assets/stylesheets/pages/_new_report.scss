@@ -59,11 +59,24 @@
 
 //------------------------------------- next/create button
 
+
 .next_text {
-  text-align:center;
-  background-color: #96DD3B;
+  text-align: center;
+  background-color: transparent;
+  border: solid 2px;
   padding: 9px 60px;
-  border-radius: 5px;
+  border-radius: 4px;
+  position: relative;
+}
+
+
+.next_text:active {
+  background-color: #96DD3B;
+  transition: 0.1s;
+  color: white;
+  border-color: #96DD3B;
+  top: 2px;
+
 }
 
 .create_button_div {
@@ -196,12 +209,11 @@ img.trash_can_icon.white {
 
 .description_row_1 {
   text-align: center;
-  margin-top: 20px;
 }
 
 #input-description-box {
   width: 328px;
-  margin: 30px;
+  margin: auto;
   height: 145px;
 }
 
@@ -210,6 +222,7 @@ img.trash_can_icon.white {
   display: flex;
   justify-content: center;
 }
+
 //---------------------------------page 4
 
 .mark-map-report {
