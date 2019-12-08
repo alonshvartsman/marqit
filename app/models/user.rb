@@ -13,10 +13,11 @@ class User < ApplicationRecord
   mount_uploader :photo, PhotoUploader
 
   def default_picture
-    if self.photo.url
-      return true
+    raise
+    if self.photo
+      self.photo = params(:user[:photo])
     else
-      self.photo = File.open(File.join(".", "app/assets/images/avatar.png"))
+      self.photo = File.open(File.join(".", "app/assets/images/profile_green.svg"))
       self.save
     end
   end

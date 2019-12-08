@@ -1,8 +1,8 @@
 .change_border {
   .round_icon {
-  background-color: #87c635;
-  transition: background-color .1s;
-  border-radius: 50%;
+    background-color: #87c635;
+    transition: background-color .1s;
+    border-radius: 50%;
     .white {
       filter: invert(100%);
     }
@@ -88,7 +88,7 @@
 // ------------------------------------ page 1
 
 *, *::before, *::after {
-    box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 .round_icon {
@@ -101,67 +101,67 @@
 }
 
 .round_icon {
-      border-radius: 50%;
-      border: solid 2px #87c635;
-    }
+  border-radius: 50%;
+  border: solid 2px #87c635;
+}
 
-    .round_icon:after{
-      display: block;
-      font-size: 30px;
-      height: 30px;
-      text-decoration: none;
-      width: 30px;
-    }
+.round_icon:after{
+  display: block;
+  font-size: 30px;
+  height: 30px;
+  text-decoration: none;
+  width: 30px;
+}
 
-    .round_icon:active{
+.round_icon:active{
       // box-shadow: 0 2px 5px 0 #87c635;
       // border: solid 2px #87c635;
     }
 
 
-.center_icon_text {
-  text-align: center;
-  font-weight: bold;
-}
+    .center_icon_text {
+      text-align: center;
+      font-weight: bold;
+    }
 
-.category_row {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 10px;
-}
+    .category_row {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 10px;
+    }
 
-.road_block_icon {
-  height: 48px;
-}
+    .road_block_icon {
+      height: 48px;
+    }
 
-.pothole_icon {
-  height: 48px;
-}
+    .pothole_icon {
+      height: 48px;
+    }
 
-.header-category-selection{
-  text-align:center;
-  margin-bottom: 21px;
-}
+    .header-category-selection{
+      text-align:center;
+      margin-bottom: 21px;
+    }
 
-.street_light {
-  height: 48px;
-}
+    .street_light {
+      height: 48px;
+    }
 
-.exterminate_icon {
-  height: 36px;
-}
+    .exterminate_icon {
+      height: 36px;
+    }
 
-.other_icon {
-  height: 48px;
-}
+    .other_icon {
+      height: 48px;
+    }
 
-img.trash_can_icon.white {
-  height: 48px;
-}
+    img.trash_can_icon.white {
+      height: 48px;
+    }
 
-.report_category {
-  padding: 5px;
-}
+    .report_category {
+      padding: 5px;
+    }
 
 // ------------------------------------ page 2
 
@@ -206,10 +206,77 @@ img.trash_can_icon.white {
   justify-content: space-around;
 }
 
+////////////avatar upload on signup///////////////////
+.profile_image_upload {
 
+}
 
+.avatar-upload {
+  position: relative;
+  max-width: 205px;
+  margin: auto;
+  .avatar-edit {
+    position: absolute;
+    right: 12px;
+    z-index: 1;
+    top: 10px;
+    input {
+      display: none;
+    }
+    label {
+      display: inline-block;
+      width: 34px;
+      height: 34px;
+      margin-bottom: 0;
+      border-radius: 100%;
+      background: #FFFFFF;
+      border: 1px solid transparent;
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+      cursor: pointer;
+      font-weight: normal;
+      transition: all .2s ease-in-out;
+      i {
+        position: absolute;
+        top: 9px;
+        left: 10px;
+    }
+    &:hover {
+      background: #f1f1f1;
+      border-color: #d6d6d6;
+    }
+    &:after {
+      color: #757575;
+      position: absolute;
+      top: 10px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      margin: auto;
+    }
+  }
 
+}
+.avatar-preview {
+  width: 192px;
+  height: 192px;
+  position: relative;
+  border-radius: 100%;
+  border: 6px solid #F8F8F8;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  > div {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+}
 
+.container.profile_image_upload {
+  width: auto;
+}
 
 
 
