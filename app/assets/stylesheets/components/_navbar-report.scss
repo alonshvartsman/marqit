@@ -29,11 +29,13 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  outline: none;
 }
 
-.report_button a:active{
-  text-decoration:none;
+.report_button:focus{
+  outline: none;
 }
+
 
 // .btn-push {
 //   position: relative;
