@@ -1,3 +1,7 @@
+<%= link_to '/' do %>
+  <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
+<% end %>
+
 <div class="signup-style">
   <%= image_tag("iconmarqit.png", :alt => "marqit icon", class: "marqit-icon") %>
 
@@ -41,7 +45,7 @@
  -->
                     <label for="user_photo"><i class="fas fa-camera"></i></label>
                     <input class="form-control-file file optional" type="file" name="user[photo]" id="user_photo" accept=".png, .jpg, .jpeg">
-                 <%# f.input :photo, label: false, wrapper_html: { class: 'd-none'} %>
+                 <%= f.input :photo, label: false, wrapper_html: { class: 'd-none'} %>
                  <%= f.input :photo_cache, as: :hidden %>
                     <!-- <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" /> -->
                 </div>
