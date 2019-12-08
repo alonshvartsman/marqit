@@ -74,8 +74,15 @@ p.card-address {
 
 .product-bottom-details {
     overflow: hidden;
+
     border-top: 1px solid #eee;
     padding-top: 10px;
+}
+
+.upvotes {
+  display:flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .product-bottom-details div {
@@ -123,7 +130,7 @@ i#thumbsup {
 
 }
 
-.category-flex{
-  display: flex;
-  justify-content: space-around;
-}
+// .category-flex{
+//   display: flex;
+//   justify-content: space-around;
+// }
