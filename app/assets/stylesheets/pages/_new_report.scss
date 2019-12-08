@@ -68,10 +68,15 @@
 .next_text {
   text-align: center;
   background-color: transparent;
+  color: black;
   border: solid 2px;
   padding: 9px 60px;
   border-radius: 4px;
   position: relative;
+}
+
+.next_text:hover{
+  text-decoration: none;
 }
 
 

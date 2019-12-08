@@ -16,11 +16,11 @@
   <p><%= @event.date.strftime("%d/%m/%Y at: %I:%M%p") %></p>
 
 </div>
-<h1 id="btn-form">
+<!-- <h1 id="btn-form"> -->
 <%= simple_form_for([@event, @attendance]) do |f|%>
-  <%= f.submit %>
+  <%= f.submit class: "next_text" %>
 <% end %>
-</h1>
+<!-- </h1> -->
 <!--
  <div class="form-group">
   <label for="your-message">Your comment</label>
