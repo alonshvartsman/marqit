@@ -1,5 +1,6 @@
 .mapboxgl-popup {
-  max-width: 300px;
+  max-width: 300px !important;
+  max-height: 175px !important;
   background-color: transparent !important;
 }
 
@@ -19,45 +20,47 @@ a.mapboxgl-ctrl-logo{
 
 .product-card {
   background: #fafafa;
-  border: solid 2px #41403E;
-  border-radius: 18px;
+  display: flex;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-p.card-address {
-  text-align: center;
-}
-.product-tumb {
+
+
+.product-tumb  {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .product-tumb img {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 16px 16px 0px 0px;
+    height: 200px;
+    width: 125px;
 }
 
-.product-details {
-  padding: 12px;
-  margin-top: -21px;
 
+.product-details {
+  text-align: left;
+  max-height: 200px !important;
 }
 
 .product-category {
-    display: block;
     font-size: 12px;
     font-weight: 700;
-    text-transform: uppercase;
     color: #ccc;
+
+}
+
+.card-category-organize{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 
 }
 
 .product-details h3 {
   font-weight: 500;
   display: block;
-  margin-bottom: 18px;
+  margin-bottom: 0;
   text-transform: uppercase;
   text-decoration: none;
   transition: 0.3s;
@@ -67,8 +70,7 @@ p.card-address {
 .product-details p {
     font-size: 15px;
     line-height: 22px;
-    margin-bottom: 8px;
-    color: #999;
+    color: black;
     position: relative;
 }
 
@@ -76,24 +78,21 @@ p.card-address {
     overflow: hidden;
 
     border-top: 1px solid #eee;
-    padding-top: 10px;
 }
 
 .upvotes {
   display:flex;
-  flex-direction: column;
-  align-items: flex-end;
+
 }
 
-.product-bottom-details div {
-    float: left;
-    width: 50%;
-}
+// .product-bottom-details div {
+//     float: left;
+//     width: 50%;
+// }
 
 .product-upvote {
     font-size: 15px;
     line-height: 22px;
-    margin-bottom: 8px;
     color: #999;
 }
 
@@ -111,7 +110,6 @@ i#thumbsup {
 {
   display: inline-block;
   cursor: pointer;
-  margin: 10px;
 
   &.can-vote:hover {
     color: #2EBDD1;
@@ -130,7 +128,6 @@ i#thumbsup {
 
 }
 
-// .category-flex{
-//   display: flex;
-//   justify-content: space-around;
-// }
+.category-flex{
+  display: flex;
+}
