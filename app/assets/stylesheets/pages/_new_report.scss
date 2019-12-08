@@ -61,10 +61,22 @@
 
 
 .next_text {
-  text-align:center;
-  background-color: #96DD3B;
+  text-align: center;
+  background-color: transparent;
+  border: solid 2px;
   padding: 9px 60px;
-  border-radius: 5px;
+  border-radius: 4px;
+  position: relative;
+}
+
+
+.next_text:active {
+  background-color: #96DD3B;
+  transition: 0.1s;
+  color: white;
+  border-color: #96DD3B;
+  top: 2px;
+
 }
 
 .create_button_div {

@@ -184,6 +184,19 @@
         </div>
         <% end %>
       </div>
-  </div>
+    </div>
+    <div class="mark-map-report">
+      <div id="map"
+        style="width: 90%; height: 600px;"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+      ></div>
+      <%= f.input :location, as: :hidden %>
+      <%= f.input :latitude, as: :hidden %>
+      <%= f.input :longitude, as: :hidden%>
+    </div>
+    <div class="create_button_div">
+      <%= f.submit class: "next_text" %>
+    </div>
+  <% end %>
 </div>
 
