@@ -22,6 +22,9 @@ a.mapboxgl-ctrl-logo{
   background: #fafafa;
   display: flex;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  position: relative;
+  border-bottom: solid 8px #96DD3B;
+
 }
 
 
@@ -52,6 +55,7 @@ a.mapboxgl-ctrl-logo{
 
 .card-category-organize{
   display: flex;
+  margin-top: 7px;
   align-items: center;
   justify-content: space-around;
 
@@ -82,7 +86,18 @@ a.mapboxgl-ctrl-logo{
 
 .upvotes {
   display:flex;
+  align-items:center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 6px;
+  right: 10px;
 
+}
+
+.upvote_number{
+  position: absolute;
+  bottom:-1px;
+  left: -20px;
 }
 
 // .product-bottom-details div {
@@ -128,6 +143,8 @@ i#thumbsup {
 
 }
 
-.category-flex{
-  display: flex;
+.footer {
+  background-color: green;
+  width: 100%;
+  height: 16px;
 }
