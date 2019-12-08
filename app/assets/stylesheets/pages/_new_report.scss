@@ -59,12 +59,6 @@
 
 //------------------------------------- next/create button
 
-.next_button {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-}
-
 .next_text {
   text-align:center;
   background-color: #96DD3B;
@@ -163,15 +157,21 @@ img.trash_can_icon.white {
   padding: 5px;
 }
 
-// ------------------------------------ page 2
-
-.new_report_container_page_2 {
-  margin-top: 100px;
+.next_button_1 {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
 }
+
+// ------------------------------------ page 2
 
 .picture_row_1 {
   text-align: center;
-  margin-top: 10px;
+}
+
+.picture_row_2 {
+  text-align: center;
+  margin-top: 110px;
 }
 
 .optional_section {
@@ -184,6 +184,12 @@ img.trash_can_icon.white {
   height: 145px;
   padding: 20px;
   border-radius: 15px;
+}
+
+.next_button_2 {
+  margin-top: 250px;
+  display: flex;
+  justify-content: center;
 }
 
 // --------------------------------page 3
@@ -199,6 +205,11 @@ img.trash_can_icon.white {
   height: 145px;
 }
 
+.next_button_3 {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
 //---------------------------------page 4
 
 .mark-map-report {
