@@ -1,15 +1,15 @@
 <div class="navbar-curvy">
+  <div class="navbar_icons tick">
   <%= link_to events_path do  %>
     <%= image_tag("svg/calendar-60.svg", :alt => "calnder") %>
-<!--     <img
-      src="svg/calendar-60.svg"
-      height="87"
-      width="100" /> -->
   <% end %>
-  <%= link_to new_report_path, class: "report_button" do  %>
+
+  <%= link_to new_report_path, class: "report_button p-0" do  %>
     <button id="report-btn">REPORT</button>
   <% end %>
+  <div class="navbar_icons tick">
     <%= link_to dashboard_path do  %>
     <%= image_tag("svg/single-01.svg", :alt => "my profile") %>
   <% end %>
+  </div>
 </div>

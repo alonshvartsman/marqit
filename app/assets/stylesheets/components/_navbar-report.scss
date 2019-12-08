@@ -15,7 +15,7 @@
 }
 
 .navbar-curvy img {
-  width: 36px;
+  width: 26px;
 }
 
 .navbar-curvy h1 {
@@ -29,68 +29,33 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  box-shadow: 1px 3px 9px rgba(0,0,0,0.3)
 }
 
+.navbar_icons {
+   width: 32px;
+  height: 32px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  box-shadow: 1px 3px 9px rgba(0,0,0,0.2);
+}
 .report_button a:active{
   text-decoration:none;
 }
 
-// .btn-push {
-//   position: relative;
-//   top: 0px;
-//   font-family: "Open Sans";
-//   text-decoration: none;
-//   font-size: 25px;
-//   background: #f7f7f7;
-//   padding: 15px 50px;
-//   margin: 0 10px;
-//   border: 1px solid #c4c4c4;
-//   -webkit-border-radius: 5px;
-//   -moz-border-radius: 5px;
-//   border-radius: 5px;
-//   -webkit-box-shadow: 0px 5px 0px #c4c4c4;
-//   -moz-box-shadow: 0px 5px 0px #c4c4c4;
-//   -ms-box-shadow: 0px 5px 0px #c4c4c4;
-//   -o-box-shadow: 0px 5px 0px #c4c4c4;
-//   box-shadow: 0px 5px 0px #c4c4c4;
-//   color: #222;
-//   text-shadow: 1px 1px 1px #fff;
-//   -webkit-transition: All 250ms ease;
-//   -moz-transition: All 250ms ease;
-//   -o-transition: All 250ms ease;
-//   -ms-transition: All 250ms ease;
-//   transition: All 250ms ease;
-// }
 
-// .btn-push:active {
-//   position: relative;
-//   top: 5px;
-//   -webkit-box-shadow: none !important;
-//   -moz-box-shadow: none !important;
-//   -ms-box-shadow: none !important;
-//   -o-box-shadow: none !important;
-//   box-shadow: none !important;
-//   -webkit-transition: All 250ms ease;
-//   -moz-transition: All 250ms ease;
-//   -o-transition: All 250ms ease;
-//   -ms-transition: All 250ms ease;
-//   transition: All 250ms ease;
-// }
+.navbar_icons {
+  border-radius: 50%;
+  border: solid 2px white;
+}
 
-// .btn-push.green {
-//   background: #7cc576;
-//   color: #fff;
-//   border: 1px solid #46963f;
-//   -webkit-border-radius: 5px;
-//   -moz-border-radius: 5px;
-//   border-radius: 5px;
-//   -webkit-box-shadow: 0px 5px 0px #46963f;
-//   -moz-box-shadow: 0px 5px 0px #46963f;
-//   -ms-box-shadow: 0px 5px 0px #46963f;
-//   -o-box-shadow: 0px 5px 0px #46963f;
-//   box-shadow: 0px 5px 0px #46963f;
-//   text-shadow: 1px 1px 1px #46963f;
-// }
-
-
-
+.navbar_icons:after{
+  display: block;
+  font-size: 30px;
+  height: 30px;
+  text-decoration: none;
+  width: 30px;
+}
