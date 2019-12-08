@@ -80,7 +80,7 @@
           </div>
         </div>
         <div class="next_button_1">
-          <a class="right carousel-control next_button_right" href="#myCarousel" data-slide="next" onclick="('#myCarousel').carousel('next')"><span class="next_text">NEXT</span></a>
+          <a class="right carousel-control next_button_right" href="#myCarousel" data-slide="next"><span class="next_text">NEXT</span></a>
          <!--  <h3><span class="next_text">Next</span></h3> -->
         </div>
       </div>
@@ -89,7 +89,7 @@
     <div class="carousel-item">
       <div class="new_report_container_page_2">
         <div class="new_report_banner">
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev" onclick="('#myCarousel').carousel('prev')"><%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon white") %></a>
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev"><%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon white") %></a>
           <ul class="progress_bar">
             <li class="progress_bar_1"></li>
             <li class="progress_bar_11"></li>
@@ -119,7 +119,7 @@
           <%= f.input :description, input_html: { id: 'input-description-box' }, label_html: { class: 'd-none'}, placeholder: '(optional)' %>
         </div>
         <div class="next_button_2">
-          <a class="right carousel-control next_button_right" href="#myCarousel" data-slide="next" onclick="('#myCarousel').carousel('next')"><span class="next_text">NEXT</span></a>
+          <a class="right carousel-control next_button_right" href="#myCarousel" data-slide="next"><span class="next_text">NEXT</span></a>
         </div>
       </div>
     </div>
@@ -127,7 +127,7 @@
     <div class="carousel-item">
       <div class="new_report_container_page_3">
         <div class="new_report_banner">
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev" onclick="('#myCarousel').carousel('prev')"><%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon white") %></a>
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev"><%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon white") %></a>
           <ul class="progress_bar">
             <li class="progress_bar_1"></li>
             <li class="progress_bar_11"></li>
@@ -144,7 +144,8 @@
         <h3><strong>Pin Location</strong></h3>
       </div>
       <div class="mark-map-report">
-        <div id="map"
+        <div class="mapbox-map"
+          id="location-selector"
           style="position: relative; width: 90%; height: 600px; margin: auto;"
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
         ></div>
@@ -153,7 +154,7 @@
         <%= f.input :longitude, as: :hidden%>
       </div>
       <div class="next_button_2">
-        <a class="right carousel-control next_button_right" href="#myCarousel" data-slide="next" onclick="('#myCarousel').carousel('next')"><span class="next_text">NEXT</span></a>
+        <a class="right carousel-control next_button_right" href="#myCarousel" data-slide="next"><span class="next_text">NEXT</span></a>
       </div>
     </div>
 
@@ -162,7 +163,7 @@
     <div class="carousel-item">
       <div class="new_report_container_page_4">
         <div class="new_report_banner">
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev" onclick="('#myCarousel').carousel('prev')"><%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon white") %></a>
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev"><%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon white") %></a>
           <ul class="progress_bar">
             <li class="progress_bar_1"></li>
             <li class="progress_bar_11"></li>
