@@ -1,204 +1,189 @@
-<div class="new_report_container_page_1">
-  <div class="new_report_banner">
-    <%= link_to '/' do %>
-    <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
-    <% end %>
-    <ul class="progress_bar">
-      <li class="progress_bar_1"></li>
-      <li class="progress_bar_2"></li>
-      <li class="progress_bar_2"></li>
-      <li class="progress_bar_2"></li>
-      <li class="progress_bar_2"></li>
-      <li class="progress_bar_2"></li>
-    </ul>
-    <%= link_to '/' do %>
-    <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
-    <% end %>
-  </div>
-  <!-- HIDDEN category field -->
-  <%= simple_form_for @report do |f| %>
-  <div style="display: none">
-    <%= f.input :category, collection: ["Road Block", "Trash", "Traffic Light", "Sewage", "Water Leak", "Exterminate", "Pothole", "Street Light", "Power Line", "other", "Fire Hazard"], as: :radio_buttons%>
-  </div>
-  <h3 class="header-category-selection"><strong>Select a Category</strong></h3>
-  <div class="category_row">
-    <div class="report_category pothole_icon" data-category="_pothole">
-      <div class="round_icon tick">
-        <%= image_tag("icons/pothole.svg", :alt => "pothole icon", class: "pothole_icon white" ) %>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="new_report_container_page_1">
+        <div class="new_report_banner">
+          <%= link_to '/' do %>
+            <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
+          <% end %>
+          <ul class="progress_bar">
+            <li class="progress_bar_1"></li>
+            <li class="progress_bar_2"></li>
+            <li class="progress_bar_2"></li>
+            <li class="progress_bar_2"></li>
+            <li class="progress_bar_2"></li>
+            <li class="progress_bar_2"></li>
+          </ul>
+          <%= link_to '/' do %>
+            <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
+          <% end %>
+        </div>
+        <!-- HIDDEN category field -->
+        <%= simple_form_for @report do |f| %>
+        <div style="display: none">
+          <%= f.input :category, collection: ["Road Block", "Trash", "Traffic Light", "Sewage", "Water Leak", "Exterminate", "Pothole", "Street Light", "Power Line", "other", "Fire Hazard"], as: :radio_buttons%>
+        </div>
+        <h3 class="header-category-selection"><strong>Select a Category</strong></h3>
+        <div class="category_row">
+          <div class="report_category pothole_icon" data-category="_pothole">
+            <div class="round_icon tick">
+              <%= image_tag("icons/pothole.svg", :alt => "pothole icon", class: "pothole_icon white" ) %>
+            </div>
+            <p class="center_icon_text">Pothole</p>
+          </div>
+          <div class="report_category trash_can_icon" data-category="_trash">
+            <div class="round_icon">
+              <%= image_tag("icons/trash_can.png", :alt => "trash can icon", class: "trash_can_icon white" ) %>
+            </div>
+            <p class="center_icon_text">Trash</p>
+          </div>
+        </div>
+        <div class="category_row">
+          <div class="report_category street_light_icon" data-category="_street_light">
+            <div class="round_icon">
+              <%= image_tag("icons/broken_light.png", :alt => "Street Light", class: "street_light white" ) %>
+            </div>
+            <p class="center_icon_text">Street Light</p>
+          </div>
+          <div class="report_category traffic_light_icon" data-category="_traffic_light">
+            <div class="round_icon">
+              <%= image_tag("icons/traffic_light_2.png", :alt => "traffic light icon", class: "traffic_light_icon white" ) %>
+            </div>
+            <p class="center_icon_text">Traffic Light</p>
+          </div>
+        </div>
+        <div class="category_row">
+          <div class="report_category exterminate_icon" data-category="_exterminate">
+            <div class="round_icon">
+              <%= image_tag("icons/rat.png", :alt => "exterminate icon", class: "exterminate_icon white" ) %>
+            </div>
+            <p class="center_icon_text">Extermination</p>
+          </div>
+          <div class="report_category road_block" data-category="_road_block">
+            <div class="round_icon">
+              <%= image_tag("icons/road_block.png", :alt => "road block icon", class: "road_block_icon white") %>
+            </div>
+            <p class="center_icon_text">Road Block</p>
+          </div>
+        </div>
+        <div class="category_row">
+          <div class="report_category sewer_leak_icon" data-category="_sewage">
+            <div class="round_icon">
+              <%= image_tag("icons/sewer.png", :alt => "sewer icon", class: "sewer_icon white" ) %>
+            </div>
+            <p class="center_icon_text">Sewage</p>
+          </div>
+          <div class="report_category other_icon" data-category="_other">
+            <div class="round_icon">
+              <%= image_tag("icons/other.png", :alt => "other icon", class: "other_icon white" ) %>
+            </div>
+            <p class="center_icon_text">Other</p>
+          </div>
+        </div>
+        <div class="next_button_1">
+          <h3><span class="next_text">Next</span></h3>
+        </div>
       </div>
-      <p class="center_icon_text">Pothole</p>
     </div>
-    <div class="report_category trash_can_icon" data-category="_trash">
-      <div class="round_icon">
-        <%= image_tag("icons/trash_can.png", :alt => "trash can icon", class: "trash_can_icon white" ) %>
-      </div>
-      <p class="center_icon_text">Trash</p>
-    </div>
-  </div>
-  <div class="category_row">
-    <div class="report_category street_light_icon" data-category="_street_light">
-      <div class="round_icon">
-        <%= image_tag("icons/broken_light.png", :alt => "Street Light", class: "street_light white" ) %>
-      </div>
-      <p class="center_icon_text">Street Light</p>
-    </div>
-    <div class="report_category traffic_light_icon" data-category="_traffic_light">
-      <div class="round_icon">
-        <%= image_tag("icons/traffic_light_2.png", :alt => "traffic light icon", class: "traffic_light_icon white" ) %>
-      </div>
-      <p class="center_icon_text">Traffic Light</p>
-    </div>
-  </div>
-  <div class="category_row">
-    <div class="report_category exterminate_icon" data-category="_exterminate">
-      <div class="round_icon">
-        <%= image_tag("icons/rat.png", :alt => "exterminate icon", class: "exterminate_icon white" ) %>
-      </div>
-      <p class="center_icon_text">Extermination</p>
-    </div>
-    <div class="report_category road_block" data-category="_road_block">
-      <div class="round_icon">
-        <%= image_tag("icons/road_block.png", :alt => "road block icon", class: "road_block_icon white") %>
-      </div>
-      <p class="center_icon_text">Road Block</p>
-    </div>
-  </div>
-  <div class="category_row">
-    <div class="report_category sewer_leak_icon" data-category="_sewage">
-      <div class="round_icon">
-        <%= image_tag("icons/sewer.png", :alt => "sewer icon", class: "sewer_icon white" ) %>
-      </div>
-      <p class="center_icon_text">Sewage</p>
-    </div>
-    <div class="report_category other_icon" data-category="_other">
-      <div class="round_icon">
-        <%= image_tag("icons/other.png", :alt => "other icon", class: "other_icon white" ) %>
-      </div>
-      <p class="center_icon_text">Other</p>
-    </div>
-  </div>
-  <div class="next_button">
-    <h3><span class="next_text">Next</span></h3>
-  </div>
   <!-- --------------------page 2 -->
-  <div class="new_report_container_page_2">
-    <div class="new_report_banner">
-      <%= link_to '/' do %>
-      <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon white") %>
-      <% end %>
-      <ul class="progress_bar">
-        <li class="progress_bar_1"></li>
-        <li class="progress_bar_11"></li>
-        <li class="progress_bar_2"></li>
-        <li class="progress_bar_2"></li>
-        <li class="progress_bar_2"></li>
-        <li class="progress_bar_2"></li>
-      </ul>
-      <%= link_to '/' do %>
-      <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
-      <% end %>
-    </div>
-    <div class="picture_row_1">
-      <h3><strong>Add Photo</strong></h3>
-      <h5 class="optional_section">(optional)</h5>
-    </div>
-    <div class="picture_row_1">
-      <label>
-        <span style="display:none;">
-          <%= f.input :photo, as: :file, input_html: { class: 'd-none'} %>
-        </span>
-        <%= image_tag("icons/camera.svg", :alt => "camera", class: "camera_icon") %>
-      </label>
-    </div>
-    <div class="next_button">
-      <h3 class="next_text">Next</h3>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <!-- -------------------------------------page 3 -->
-    <div class="new_report_container_page_3">
-      <div class="new_report_banner">
-        <%= link_to '/' do %>
-        <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
-        <% end %>
-        <ul class="progress_bar">
-          <li class="progress_bar_1"></li>
-          <li class="progress_bar_11"></li>
-          <li class="progress_bar_11"></li>
-          <li class="progress_bar_2"></li>
-          <li class="progress_bar_2"></li>
-          <li class="progress_bar_2"></li>
-        </ul>
-        <%= link_to '/' do %>
-        <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
+      <div class="carousel-item">
+        <div class="new_report_container_page_2">
+          <div class="new_report_banner">
+            <%= link_to '/' do %>
+            <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon white") %>
+            <% end %>
+            <ul class="progress_bar">
+              <li class="progress_bar_1"></li>
+              <li class="progress_bar_11"></li>
+              <li class="progress_bar_2"></li>
+              <li class="progress_bar_2"></li>
+              <li class="progress_bar_2"></li>
+              <li class="progress_bar_2"></li>
+            </ul>
+            <%= link_to '/' do %>
+            <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
+            <% end %>
+          </div>
+          <div class="picture_row_1">
+            <h3><strong>Add Photo</strong></h3>
+            <h5 class="optional_section">(optional)</h5>
+          </div>
+          <div class="picture_row_2">
+            <label>
+              <span style="display:none;">
+                <%= f.input :photo, as: :file, input_html: { class: 'd-none'} %>
+              </span>
+              <%= image_tag("icons/camera.svg", :alt => "camera", class: "camera_icon") %>
+            </label>
+          </div>
+          <div class="next_button_2">
+            <h3 class="next_text">Next</h3>
+          </div>
+        </div>
+      </div>
+          <!-- -------------------------------------page 3 -->
+      <div class="carousel-item">
+        <div class="new_report_container_page_3">
+          <div class="new_report_banner">
+            <%= link_to '/' do %>
+            <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
+            <% end %>
+            <ul class="progress_bar">
+              <li class="progress_bar_1"></li>
+              <li class="progress_bar_11"></li>
+              <li class="progress_bar_11"></li>
+              <li class="progress_bar_2"></li>
+              <li class="progress_bar_2"></li>
+              <li class="progress_bar_2"></li>
+            </ul>
+            <%= link_to '/' do %>
+            <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
+            <% end %>
+          </div>
+          <div class="description_row_1">
+            <h3><strong>Add Description</strong></h3>
+            <!-- <textarea rows="6" cols="40" placeholder="(optional)" class="text-box"></textarea> -->
+            <%= f.input :description, input_html: { id: 'input-description-box' }, label_html: { class: 'd-none'}, placeholder: '(optional)' %>
+          </div>
+        </div>
+        <div class="next_button_3">
+          <h3 class="next_text">Next</h3>
+        </div>
+      </div>
+        <!-- ------------------------------------page 4 -->
+      <div class="carousel-item">
+        <div class="new_report_container_page_4">
+          <div class="new_report_banner">
+            <%= link_to '/' do %>
+            <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
+            <% end %>
+            <ul class="progress_bar">
+              <li class="progress_bar_1"></li>
+              <li class="progress_bar_11"></li>
+              <li class="progress_bar_11"></li>
+              <li class="progress_bar_11"></li>
+              <li class="progress_bar_2"></li>
+              <li class="progress_bar_2"></li>
+            </ul>
+            <%= link_to '/' do %>
+            <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
+            <% end %>
+          </div>
+        </div>
+        <div class="mark-map-report">
+          <div id="map"
+            style="width: 90%; height: 600px;"
+            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+          ></div>
+          <%= f.input :location, as: :hidden %>
+          <%= f.input :latitude, as: :hidden %>
+          <%= f.input :longitude, as: :hidden%>
+        </div>
+        <div class="create_button_div">
+          <%= f.submit class: "create_button" %>
+        </div>
         <% end %>
       </div>
-      <div class="description_row_1">
-        <h3><strong>Add Description</strong></h3>
-        <!-- <textarea rows="6" cols="40" placeholder="(optional)" class="text-box"></textarea> -->
-        <%= f.input :description, input_html: { id: 'input-description-box' }, label_html: { class: 'd-none'}, placeholder: '(optional)' %>
-      </div>
-    </div>
-    <div class="next_button">
-      <h3 class="next_text">Next</h3>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <!-- ------------------------------------page 4 -->
-    <div class="new_report_container_page_4">
-      <div class="new_report_banner">
-        <%= link_to '/' do %>
-        <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
-        <% end %>
-        <ul class="progress_bar">
-          <li class="progress_bar_1"></li>
-          <li class="progress_bar_11"></li>
-          <li class="progress_bar_11"></li>
-          <li class="progress_bar_11"></li>
-          <li class="progress_bar_2"></li>
-          <li class="progress_bar_2"></li>
-        </ul>
-        <%= link_to '/' do %>
-        <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
-        <% end %>
-      </div>
-    </div>
-
-    <div class="mark-map-report">
-      <div id="map"
-        style="width: 90%; height: 600px;"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-      ></div>
-      <%= f.input :location, as: :hidden %>
-      <%= f.input :latitude, as: :hidden %>
-      <%= f.input :longitude, as: :hidden%>
-    </div>
-    <div class="create_button_div">
-      <%= f.submit class: "create_button" %>
-    </div>
-  <% end %>
+  </div>
 </div>
-
-
 
