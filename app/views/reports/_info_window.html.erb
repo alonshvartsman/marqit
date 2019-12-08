@@ -34,12 +34,13 @@
       </div>
       <div class="upvotes">
       <div class="product-upvote" data-report-id="<%= report.id %>" >
-        Upvotes:
-        <span data-report-id="<%= report.id %>"><%= report.votes.count %></span>
+        <span data-report-id="<%= report.id %>" class="upvote_number"><%= report.votes.count %></span>
       </div>
       <div class="upvotemachine"><%= link_to vote_up_report_path(report), :method => :post, remote: true do %></div>
         <i class="fa fa-thumbs-up fa-2x like can-vote" aria-hidden="true"></i>
         <% end %>
       </div>
     </div>
+ <!--    <div class="footer">
+    </div> -->
   </div>
