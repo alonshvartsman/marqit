@@ -1,3 +1,7 @@
+<%= link_to '/' do %>
+  <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
+<% end %>
+
 <div class="login-style">
   <%= image_tag("iconmarqit.png", :alt => "marqit icon", class: "marqit-icon") %>
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
