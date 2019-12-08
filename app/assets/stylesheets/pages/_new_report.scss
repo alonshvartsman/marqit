@@ -65,13 +65,10 @@
   background-color: transparent;
   color: black;
   border: solid 2px;
-  padding: 9px 60px;
   border-radius: 4px;
   position: relative;
-}
-
-.next_text:hover{
-  text-decoration: none;
+  padding: 10px 67px;
+  font-size: 20px;
 }
 
 
@@ -81,7 +78,6 @@
   color: white;
   border-color: #96DD3B;
   top: 2px;
-
 }
 
 .create_button_div {
@@ -178,8 +174,12 @@ img.trash_can_icon.white {
   margin-top: 50px;
   display: flex;
   justify-content: center;
+  margin-bottom:8px;
 }
 
+.next_button_1 a{
+  text-decoration: none;
+}
 // ------------------------------------ page 2
 
 .picture_row_1 {
@@ -196,24 +196,30 @@ img.trash_can_icon.white {
 }
 
 .camera_icon {
-  margin-top: 50px;
+  margin-top: -56px;
   background-color: #E0E0E0;
   height: 145px;
   padding: 20px;
   border-radius: 15px;
 }
 
+.description_row_3 {
+  text-align: center;
+  margin-top: 67px;
+}
 .next_button_2 {
-  margin-top: 250px;
+  margin-top: 100px;
   display: flex;
   justify-content: center;
+  margin-bottom:8px;
+}
+
+.next_button_2 a{
+  text-decoration: none;
 }
 
 // --------------------------------page 3
 
-.description_row_1 {
-  text-align: center;
-}
 
 #input-description-box {
   width: 328px;
@@ -225,6 +231,7 @@ img.trash_can_icon.white {
   margin-top: 50px;
   display: flex;
   justify-content: center;
+  margin-bottom:8px;
 }
 
 //---------------------------------page 4
