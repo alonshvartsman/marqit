@@ -22,7 +22,7 @@ class ReportsController < ApplicationController
                                       "marker_sewer.png"
                                     when "Pothole"
                                       "marker_pothole.png"
-                                    when "Other"
+                                    when "other"
                                       "marker_other.png"
                                     when "Street Light"
                                       "marker_streetlight.png"
