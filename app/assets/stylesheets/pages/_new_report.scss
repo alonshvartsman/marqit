@@ -9,7 +9,25 @@
   }
 }
 
+.mapboxgl-ctrl-top-right {
+  display: flex;
+  flex-direction: row-reverse;
+}
 
+.mapboxgl-ctrl-icon {
+  margin-top: 10px;
+}
+
+
+.mapboxgl-ctrl-group {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.mapboxgl-ctrl-icon {
+  background: white !important;
+  border-radius: 5px;
+}
  // -----------------------------Font
 // @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 
@@ -257,6 +275,16 @@
   display: flex;
   justify-content: center;
   margin-bottom:8px;
+  margin-top: 37px;
+}
+
+.next_button_3 a{
+  text-decoration: none;
+}
+
+.header-pin-location {
+  display: flex;
+  justify-content: center;
 }
 
 //---------------------------------page 4
