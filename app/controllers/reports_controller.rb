@@ -10,18 +10,34 @@ class ReportsController < ApplicationController
       {
         lat: report.latitude,
         lng: report.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { report: report })
-      }
-    end
+        infoWindow: render_to_string(partial: "info_window", locals: { report: report }),
+        image_url: helpers.asset_url(case report.category
+                                    when "Road Block"
+                                      "marker_roadblock.png"
+                                    when "Trash"
+                                      "marker_trash.png"
+                                    when "Traffic Light"
+                                      "marker_trafficlight.png"
+                                    when "Sewage"
+                                      "marker_sewer.png"
+                                    when "Pothole"
+                                      "marker_pothole.png"
+                                    when "other"
+                                      "marker_other.png"
+                                    when "Street Light"
+                                      "marker_streetlight.png"
+                                    when "Exterminate"
+                                      "marker_rat.png"
+                                    end
+                                    )
+    }end
   end
 
   def create
     @report = Report.new(report_params)
     @report.user = current_user
-    # authorize @report
     if @report.save
       render 'confirmation'
-      # redirect to @report, notice: 'Report was successfully created'
     else
       render :new
     end

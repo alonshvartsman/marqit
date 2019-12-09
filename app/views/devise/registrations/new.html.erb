@@ -29,25 +29,14 @@
     <%= f.input :password_confirmation,
     required: true,
     input_html: { autocomplete: "new-password" } %>
- <!--    <label>
-      <span style=""> -->
-<!--       </span>
-    </label> -->
 
-   <%# image_tag("avatar.png", :alt => "avatar", class: "camera2_icon") %>
         <div class="container profile_image_upload">
             <div class="avatar-upload">
                 <div class="avatar-edit">
-
-
-                   <!-- <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
-            <label for="imageUpload"></label>
- -->
-                    <label for="user_photo"><i class="fas fa-camera"></i></label>
-                    <input class="form-control-file file optional" type="file" name="user[photo]" id="user_photo" accept=".png, .jpg, .jpeg">
+                    <label for="photo"><i class="fas fa-camera"></i></label>
+                    <input class="form-control-file file optional" type="file" name="user[photo]" id="photo" accept=".png, .jpg, .jpeg">
                  <%= f.input :photo, label: false, wrapper_html: { class: 'd-none'} %>
                  <%= f.input :photo_cache, as: :hidden %>
-                    <!-- <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" /> -->
                 </div>
                 <div class="avatar-preview">
                     <div id="imagePreview" style="background-image: url(http://gazdaglanguageempire.com/img/profile_placeholder_green.svg);">
