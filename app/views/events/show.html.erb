@@ -26,18 +26,10 @@
     <%= f.submit class: "next_text unattend_button" %>
   <% end %>
 <% end %>
-<!-- </h1> -->
-<!--
- <div class="form-group">
-  <label for="your-message">Your comment</label>
-  <textarea type="text" name="content" id="your-message" class="form-control" placeholder="Here is my message.."></textarea>
-</div>
-<input type="submit" value="Send" class="btn btn-primary">
 
-<div id="messages">
-  <ul class="list unstyle" id="messages-list">
-    <li>A sample message (posted <span class="date">10 minutes ago</span>) by John</li>
-  </ul>
-  <button class="btn btn-danger" id="refresh">Refresh Chat</button>
+
+<div class="messaging-board">
+  <%= @chat_room.messages.each do |message| %>
+    <%= render "messages/message", 'message' :message %>
+  <% end %>
 </div>
- -->

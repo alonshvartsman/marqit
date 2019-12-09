@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_04_132710) do
+ActiveRecord::Schema.define(version: 2019_12_09_153249) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,12 @@ ActiveRecord::Schema.define(version: 2019_12_04_132710) do
     t.index ["user_id"], name: "index_attendances_on_user_id"
   end
 
+  create_table "chat_rooms", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "events", force: :cascade do |t|
     t.text "description"
     t.string "name"
@@ -35,13 +41,13 @@ ActiveRecord::Schema.define(version: 2019_12_04_132710) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.bigint "event_id"
     t.bigint "user_id"
     t.text "text"
     t.datetime "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["event_id"], name: "index_messages_on_event_id"
+    t.bigint "chat_room_id"
+    t.index ["chat_room_id"], name: "index_messages_on_chat_room_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
@@ -91,6 +97,6 @@ ActiveRecord::Schema.define(version: 2019_12_04_132710) do
 
   add_foreign_key "attendances", "events"
   add_foreign_key "attendances", "users"
-  add_foreign_key "messages", "events"
+  add_foreign_key "messages", "chat_rooms"
   add_foreign_key "messages", "users"
 end
