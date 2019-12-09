@@ -3,7 +3,7 @@ class Event < ApplicationRecord
   has_many :attendances, dependent: :destroy
   has_many :messages, dependent: :destroy
   has_many :users, through: :attendances
-  has_many :users, through: :messages
+  # has_many :users, through: :messages
   mount_uploader :photo, PhotoUploader
 
   def default_picture
@@ -13,5 +13,9 @@ class Event < ApplicationRecord
       self.photo = File.open(File.join(".", "app/assets/images/green-tel -aviv.jpeg"))
       self.save
     end
+  end
+
+  def attending?(user)
+    users.find_by(id: user.id)
   end
 end
