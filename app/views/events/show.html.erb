@@ -16,8 +16,15 @@
   <p><%= @event.date.strftime("%d/%m/%Y at: %I:%M%p") %></p>
 
 </div>
-<%= simple_form_for([@event, @attendance]) do |f|%>
-  <%= f.submit class: "next_text" %>
+<!-- <h1 id="btn-form"> -->
+  <% if @event.attending?(current_user)%>
+  <div class="unattend_button">
+      <%= link_to "Unattend", attendance_path, method: :delete, data: { confirm: 'Are you sure?'}, class: "next_text" %>
+      </div>
+  <% else %>
+  <%= simple_form_for([@event, @attendance]) do |f|%>
+    <%= f.submit class: "next_text unattend_button" %>
+  <% end %>
 <% end %>
 
 

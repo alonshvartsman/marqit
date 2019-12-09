@@ -73,9 +73,17 @@
   position: relative;
 }
 
+.marqit_text {
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  width: 18px;
+  transform: scale(0.3);
+  opacity: 0.6;
+}
+
 .nav-bar-affect:active {
   top: 2px;
 }
-
 
 
