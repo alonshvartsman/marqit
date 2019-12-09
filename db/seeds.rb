@@ -17,7 +17,7 @@ omri = User.create!(first_name: 'omri', last_name: 'shabtay', email: 'omri@shabt
 
 
 # EVENTNAMES = ["Clean up the beach!", "Road side clean up!", "Climate change protest", "Save the turtles!", "Electric transportation rally", "Plant festival", "Fighting for tomorrow", "Greenest Grass", "greta is comimg over"]
-# CATEGORIES = ["Road Block", "Fire Hazard", "Pot Hole", "Water Leak", "Trash Over-Flow", "Malfunctioning Taffic Light", "Sewer leak", "Other"]
+# CATEGORIES = ["Road Block", "Fire Hazard", "Pothole", "Water Leak", "Trash Over-Flow", "Malfunctioning Taffic Light", "Sewer leak", "Other"]
 LOCATIONS = ["Ben yehuda 32, tel aviv", "arlozorov 7, tel aviv", "ben zion 25, tel aviv", "basel 10, tel aviv", "habima square, tel aviv", "gordon beach, tel aviv", "dizengoff 123, tel aviv", "alrozorov 17, tel aviv"]
 # EVENT_DESCRIPTION = ["Come join the fight for our Planet!"]
 REPORT_DESCRIPTION = ["Trash over-flowing", "There is a huge hole in the middle of the street", "the street light is not working", "there is sewer eveywhere!", "So many mosquitoes", "fire hydrant has blown up!"]
@@ -62,7 +62,7 @@ puts "creating 3 reports for omri"
     location: LOCATIONS.sample,
     remote_photo_url: REPORT_PHOTOS.sample,
     upvote: 0,
-    category: "Other"
+    category: "other"
     )
 end
 
