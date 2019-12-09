@@ -1,6 +1,6 @@
 <div class="navbar-curvy">
   <div class="navbar_icons tick">
-  <%= link_to events_path do  %>
+  <%= link_to events_path, class: "nav-bar-affect" do  %>
     <%= image_tag("svg/calendar-60.svg", :alt => "calnder") %>
   <% end %>
 </div>
@@ -9,7 +9,7 @@
     <button id="report-btn" class="p-0">REPORT</button>
   <% end %>
   <div class="navbar_icons tick">
-    <%= link_to dashboard_path do  %>
+    <%= link_to dashboard_path, class: "nav-bar-affect" do  %>
     <%= image_tag("svg/single-01.svg", :alt => "my profile") %>
   <% end %>
   </div>
