@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'messages/new'
+  get 'messages/update'
+  get 'new/update'
   devise_for :users
   get 'dashboard', to: "pages#dashboard"
   root to: 'reports#index'

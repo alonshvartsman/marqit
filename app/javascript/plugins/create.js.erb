@@ -1,0 +1,9 @@
+<% if @message.errors.any %>
+
+<% else %>
+  const messageContainer = document.querySelector('.messages-all');
+  messageContainer.insertAdjacentHTML('beforeend')
+  const input_message = document.querySelector('.message-content', '<%= j render "message", message: @message %>');
+  input.value = '';
+  input.blue();
+<% end %>
