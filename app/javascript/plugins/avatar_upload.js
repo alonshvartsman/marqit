@@ -1,4 +1,5 @@
 const readURL = (input) => {
+  if (input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
         reader.onload = function(e) {
@@ -7,8 +8,9 @@ const readURL = (input) => {
             $('#imagePreview').fadeIn(650);
         }
         reader.readAsDataURL(input.files[0]);
+      }
     }
-}
+  }
 $("#user_photo").change(function() {
     readURL(this);
 });
