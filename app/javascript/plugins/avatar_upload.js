@@ -11,7 +11,7 @@ const readURL = (input) => {
       }
     }
   }
-$("#user_photo").change(function() {
+$("#photo").change(function() {
     readURL(this);
 });
 

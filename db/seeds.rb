@@ -62,7 +62,7 @@ puts "creating 3 reports for omri"
     location: LOCATIONS.sample,
     remote_photo_url: REPORT_PHOTOS.sample,
     upvote: 0,
-    category: "Other"
+    category: "other"
     )
 end
 
