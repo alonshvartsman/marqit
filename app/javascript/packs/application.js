@@ -4,10 +4,12 @@ import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 
 import { initMapbox } from '../plugins/init_mapbox';
 import { readURL } from '../plugins/avatar_upload';
+import { previewImageOnFileSelect, displayText } from '../plugins/snapshop';
 
 initMapbox();
 readURL();
-
+previewImageOnFileSelect();
+displayText();
 
 
 

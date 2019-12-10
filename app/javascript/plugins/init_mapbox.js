@@ -113,6 +113,7 @@ const setupMap = (element) => {
       const input = document.querySelector(".mapboxgl-ctrl-geocoder--input")
     });
   };
+  console.log(map);
   return map;
 }
 
