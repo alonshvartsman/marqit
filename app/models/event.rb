@@ -1,6 +1,6 @@
 class Event < ApplicationRecord
   after_create :default_picture
-  has_one :chat_room
+  has_one :chat_room, dependent: :destroy
   has_many :attendances, dependent: :destroy
   has_many :users, through: :attendances
   has_many :messages, through: :chat_room
