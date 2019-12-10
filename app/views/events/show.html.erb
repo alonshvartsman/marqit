@@ -17,13 +17,13 @@
   <p>attending:<%= @event.attendances.length %></p>
 
   <% if @event.attending?(current_user)%>
-    <%= simple_form_for([@event, @attendance]) do |f|%>
-      <%= f.submit class: "next_text attend_button" %>
-    <% end %>
-  <% else %>
     <div class="unattend_button">
       <%= link_to "Unattend", attendance_path, method: :delete, data: { confirm: 'Are you sure?'}, class: "next_text" %>
     </div>
+  <% else %>
+    <%= simple_form_for([@event, @attendance]) do |f|%>
+      <%= f.submit class: "next_text attend_button" %>
+    <% end %>
   <% end %>
 </div>
 <!-- <h1 id="btn-form"> -->
