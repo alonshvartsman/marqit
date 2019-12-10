@@ -17,15 +17,15 @@
 
 </div>
 <!-- <h1 id="btn-form"> -->
-  <% if @event.attending?(current_user)%>
+  <%# if @event.attending?(current_user)%>
   <div class="unattend_button">
       <%= link_to "Unattend", attendance_path, method: :delete, data: { confirm: 'Are you sure?'}, class: "next_text" %>
       </div>
-  <% else %>
+  <%# else %>
   <%= simple_form_for([@event, @attendance]) do |f|%>
     <%= f.submit class: "next_text unattend_button" %>
   <% end %>
-<% end %>
+<%# end %>
 
 
 <div class="messages-all">
@@ -33,13 +33,29 @@
     <%= render "messages/message", message: message %>
   <% end %>
   <div id="create-message">
-    <%= simple_form_for [ @chat_room, Message.new ], remote: true do |f| %>
-      <%= f.input :content, label: false %>
+    <%= simple_form_for [ @event, @chat_room, Message.new ], remote: true do |f| %>
+      <%= f.input :text, label: false %>
+      <%= f.submit %>
     <% end %>
   </div>
-
-  <div class="message <%= message.from?(current_user) ? "right" : "" %>">
-    <%= message.user.avatar_url %>
-    <div class="message-content"><%= message.text %></div>
-  </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -8,6 +8,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @attendance = Attendance.new
 
-    @chat_room = Event.includes(messages: :user).find(params[:id])
+    @chat_room = ChatRoom.includes(messages: :user).find(params[:id])
+    # authorize @messages
   end
 end

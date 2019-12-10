@@ -1,9 +1,9 @@
-<% if @message.errors.any %>
+<% if @message.errors.any? %>
 
 <% else %>
   const messageContainer = document.querySelector('.messages-all');
-  messageContainer.insertAdjacentHTML('beforeend')
-  const input_message = document.querySelector('.message-content', '<%= j render "message", message: @message %>');
+  messageContainer.insertAdjacentHTML('beforeend', '<%= j render "message", message: @message %>')
+  const input = document.querySelector('.message-content');
   input.value = '';
-  input.blue();
+  input.blur();
 <% end %>
