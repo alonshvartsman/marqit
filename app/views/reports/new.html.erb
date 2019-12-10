@@ -186,19 +186,20 @@
           <% end %>
         </div>
         <div class="review_page">
-        <div>
-          <%= image_tag "", width: 300, class: "hidden", id: "photo-preview" %>
-        </div>
-        <div id="target"></div>
-          <div id="mapLocation"></div>
-          <div id="review_category"></div>
+          <div>
+          <h3 class="review_header">Review Report</h3>
+            <%= image_tag "", width: 300, class: "hidden", id: "photo-preview" %>
+            <div id="review_category"></div>
+            <div id="mapLocation"></div>
+            <div id="target"></div>
           </div>
-        <div class="create_button_div">
-          <%= f.submit class: "create_button" %>
-        </div>
+          <div class="create_button_div">
+            <%= f.submit class: "create_button" %>
+          </div>
         <% end %>
       </div>
     </div>
   </div>
+</div>
 </div>
 
