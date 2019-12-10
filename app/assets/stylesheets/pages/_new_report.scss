@@ -379,12 +379,30 @@ font-family:'Source Sans Pro';
 
 .review_page {
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
-  align-items: center;
+  width: 80vw;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 90vh;
+  -webkit-box-align: center;
 }
 
+#review_category{
+  font-weight: bold;
+  font-size: 24px;
+}
 
+#mapLocation {
+  margin-bottom: 16px;
+  font-size:16px;
+}
 
+.review_header{
+  text-align: center;
+  font-weight: bolder;
+}
 
 
 
