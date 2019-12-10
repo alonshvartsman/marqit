@@ -27,12 +27,14 @@ const nextButton = document.querySelector('.next_button_3');
     const description = document.getElementById('input-description-box').value
     const target = document.getElementById('target')
     target.innerHTML = description
+
     const locationForMap = document.querySelector('.mapboxgl-ctrl-geocoder--input').value
     const targetLocation = document.getElementById('mapLocation')
     mapLocation.innerHTML = locationForMap
-    const categoriesNew = document.getElementById('categories').value
+
+    const categorySelected = document.querySelector("input[type='radio']:checked").value
     const categoryReview = document.getElementById('review_category')
-    categoryReview.innerHTML = categoriesNew
+    categoryReview.innerHTML = categorySelected
   })
 };
 export { previewImageOnFileSelect, displayText };
