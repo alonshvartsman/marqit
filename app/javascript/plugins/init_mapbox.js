@@ -87,7 +87,6 @@ const setupMap = (element) => {
       //   },
       // });
       geocoder.on('result', function(ev) {
-        console.log(ev)
         const location = ev.result.place_name
         const coords = ev.result.geometry.coordinates
 
