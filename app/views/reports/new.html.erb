@@ -20,7 +20,7 @@
         <!-- HIDDEN category field -->
         <%= simple_form_for @report do |f| %>
         <div style="display: none">
-          <%= f.input :category, collection: ["Road Block", "Trash", "Traffic Light", "Sewage", "Water Leak", "Exterminate", "Pothole", "Street Light", "Power Line", "other", "Fire Hazard"], as: :radio_buttons%>
+          <%= f.input :category, collection: ["Road Block", "Trash", "Traffic Light", "Sewage", "Water Leak", "Exterminate", "Pothole", "Street Light", "Power Line", "other", "Fire Hazard"], as: :radio_buttons, input_html: { id: 'categories' }%>
         </div>
         <h3 class="header-category-selection"><strong>Select a Category</strong></h3>
         <div class="category_row">
@@ -111,16 +111,17 @@
                 <div class="avatar-edit">
                     <label for="photo"><i class="fas fa-plus-circle"></i></label>
                     <input class="form-control-file file optional" type="file" name="report[photo]" id="photo" accept=".png, .jpg, .jpeg">
-                 <%= f.input :photo, label: false, wrapper_html: { class: 'd-none'} %>
+                 <%= f.input :photo, label: false, wrapper_html: { class: 'd-none'}%>
                  <%= f.input :photo_cache, as: :hidden %>
                 </div>
                 <div class="avatar-preview upload-rep-photo">
                     <div id="imagePreview" class="report-photo-upload" style="background-image: url(https://icon-library.net/images/placeholder-image-icon/placeholder-image-icon-7.jpg);">
                     </div>
                 </div>
-              </label>
+
             </div>
         </div>
+
 
         <div class="description_row_3">
           <h3><strong>Add Description</strong></h3>
@@ -158,7 +159,7 @@
           style="position: relative; width: 90%; height: 600px; margin: auto;"
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
         ></div>
-        <%= f.input :location, as: :hidden %>
+        <%= f.input :location, as: :hidden, input_html: { id: 'second-map-location' } %>
         <%= f.input :latitude, as: :hidden %>
         <%= f.input :longitude, as: :hidden%>
       </div>
@@ -184,6 +185,14 @@
           <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
           <% end %>
         </div>
+        <div class="review_page">
+        <div>
+          <%= image_tag "", width: 300, class: "hidden", id: "photo-preview" %>
+        </div>
+        <div id="target"></div>
+          <div id="mapLocation"></div>
+          <div id="review_category"></div>
+          </div>
         <div class="create_button_div">
           <%= f.submit class: "create_button" %>
         </div>

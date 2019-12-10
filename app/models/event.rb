@@ -1,8 +1,10 @@
 class Event < ApplicationRecord
   after_create :default_picture
+  has_one :chat_room
   has_many :attendances, dependent: :destroy
-  has_many :messages, dependent: :destroy
   has_many :users, through: :attendances
+  has_many :messages, through: :chat_room
+  has_many :users, through: :messages
   # has_many :users, through: :messages
   mount_uploader :photo, PhotoUploader
 

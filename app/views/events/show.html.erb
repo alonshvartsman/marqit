@@ -17,27 +17,45 @@
 
 </div>
 <!-- <h1 id="btn-form"> -->
-  <% if @event.attending?(current_user)%>
+  <%# if @event.attending?(current_user)%>
   <div class="unattend_button">
       <%= link_to "Unattend", attendance_path, method: :delete, data: { confirm: 'Are you sure?'}, class: "next_text" %>
       </div>
-  <% else %>
+  <%# else %>
   <%= simple_form_for([@event, @attendance]) do |f|%>
     <%= f.submit class: "next_text unattend_button" %>
   <% end %>
-<% end %>
-<!-- </h1> -->
-<!--
- <div class="form-group">
-  <label for="your-message">Your comment</label>
-  <textarea type="text" name="content" id="your-message" class="form-control" placeholder="Here is my message.."></textarea>
-</div>
-<input type="submit" value="Send" class="btn btn-primary">
+<%# end %>
 
-<div id="messages">
-  <ul class="list unstyle" id="messages-list">
-    <li>A sample message (posted <span class="date">10 minutes ago</span>) by John</li>
-  </ul>
-  <button class="btn btn-danger" id="refresh">Refresh Chat</button>
+
+<div class="messages-all">
+  <%= @chat_room.messages.each do |message| %>
+    <%= render "messages/message", message: message %>
+  <% end %>
+  <div id="create-message">
+    <%= simple_form_for [ @event, @chat_room, Message.new ], remote: true do |f| %>
+      <%= f.input :text, label: false %>
+      <%= f.submit %>
+    <% end %>
+  </div>
 </div>
- -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
