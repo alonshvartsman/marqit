@@ -12,10 +12,12 @@ Rails.application.routes.draw do
   end
     resources :events, only: %i[index show] do
       resources :attendances, only: %i[create]
-      resources :chat_room, only: [] do
-        resources :messages, only: [:create]
-      end
     end
+    resources :chat_room, only: [] do
+      resources :messages, only: [:create]
+    end
+
+
   resources :attendances, only: %i[destroy]
 
 

@@ -29,12 +29,14 @@
 
 
 <div class="messages-all">
-  <% @chat_room.messages.each do |message| %>
-    <%= render "messages/message", message: message %>
-  <% end %>
+  <div class="message_container">
+    <% @chat_room.messages.each do |message| %>
+      <%= render "messages/message", message: message %>
+    <% end %>
+  </div>
   <div id="create-message">
-    <%= simple_form_for [ @event, @chat_room, Message.new ], remote: true do |f| %>
-      <%= f.input :text, label: false %>
+    <%= simple_form_for [@chat_room, Message.new ], remote: true do |f| %>
+      <%= f.input :text, label: false, input_html: {id: "message_input"} %>
       <%= f.submit %>
     <% end %>
   </div>
