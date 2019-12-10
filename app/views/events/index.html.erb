@@ -1,3 +1,4 @@
+<div class="title-events">
 <div class="nav-icons">
   <%= link_to '/' do %>
   <%= image_tag("icons/arrow_left.svg", :alt => "arrow left", class: "arrow_left_icon") %>
@@ -7,19 +8,21 @@
   <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
   <% end %>
 </div>
-
-<h1 id="events-title">All The Events In Your City</h1>
+<h1 id="events-title">All The Events In <span class="tel-aviv">Tel Aviv</span></h1>
+</div>
 <div class="all-events">
   <% @events.each do |event| %>
   <%= link_to event_path(event) do %>
-  <div class ="tab-style">
+  <div class ="tab-style-event">
     <div class="card-product">
        <%= cl_image_tag event.photo %>
-      <div class="card-product-infos">
+      <div class="card-product-infos-events">
+        <%= image_tag("greenstroke.png", id: "green_spalsh") %>
         <h2> <%= event.description %></h2>
         <p><%= event.name %></p>
         <p><%= event.location %></p>
         <p><%= event.date.strftime("%d/%m/%Y") %></p>
+        <%= image_tag("rightarrow.png", id: "right_arrow_event") %>
       </div>
     </div>
  </div>
