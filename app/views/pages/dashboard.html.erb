@@ -42,6 +42,15 @@
 </div>
 
   <div class="tab-pane" id="events" role="tabpanel" aria-labelledby="events-tab">
+    <% if @events.empty? %>
+    <div class="no_events">
+    <p class="no_events_text">You are not attending any events!</p>
+    <p id="get_started"> Get started!</p>
+    <%= link_to events_path do %>
+    <% image_tag("svg/calendar-60.svg", :alt => "calendar ") %>
+    <% end %>
+    </div>
+    <% else %>
     <% @events.each do |event| %>
     <div class ="tab-style">
       <div class="card-product">
@@ -55,6 +64,7 @@
         </div>
       </div>
     </div>
+    <% end %>
     <% end %>
   </div>
 
