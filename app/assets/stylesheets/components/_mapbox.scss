@@ -23,7 +23,7 @@ a.mapboxgl-ctrl-logo{
   display: flex;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   position: relative;
-  border-bottom: solid 8px #96DD3B;
+  border-bottom: solid 5px #96DD3B;
 
 }
 
@@ -55,7 +55,7 @@ a.mapboxgl-ctrl-logo{
 
 .card-category-organize{
   display: flex;
-  margin-top: 7px;
+  // margin-top: 7px;
   align-items: center;
   justify-content: space-around;
 
@@ -104,6 +104,11 @@ a.mapboxgl-ctrl-logo{
 //     float: left;
 //     width: 50%;
 // }
+
+.icon_image_popup {
+  width:20px;
+  height:20px;
+}
 
 .product-upvote {
     font-size: 15px;
