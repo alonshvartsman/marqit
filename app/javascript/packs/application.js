@@ -9,13 +9,18 @@ import { previewImageOnFileSelect, displayText } from '../plugins/snapshop';
 
 initMapbox();
 readURL();
-previewImageOnFileSelect();
-displayText();
 
+const nextButton = document.querySelector('.next_button_3');
 
+if(nextButton) {
+  previewImageOnFileSelect();
+  displayText();
+}
 // --------------catagory slection javaScript
 
 const categories = document.querySelectorAll(".report_category");
+if(categories) {
+
 categories.forEach((category) => {
   category.addEventListener("click", (event) => {
     categories.forEach((category) => {
@@ -29,3 +34,4 @@ categories.forEach((category) => {
   });
 });
 
+}

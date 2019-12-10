@@ -2,17 +2,17 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     @chat_room = ChatRoom.find(params[:chat_room_id])
-    @event = Event.find(params[:event_id])
+    @event = @chat_room.event
     @message.chat_room = @chat_room
     @message.user = current_user
     @message.event = @event
-    if @message.save
+    if @message.save!
       respond_to do |format|
         format.html { redirect_to event_path(@event) }
         format.js
       end
+
     else
-      binding.pry
       respond_to do |format|
         format.html { render "events/show" }
         format.js
