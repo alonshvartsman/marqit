@@ -127,44 +127,63 @@ end
 # end
 
 puts "creating 4 events"
-1.times do
-  Event.create!(
+
+  event_one = Event.create!(
     description: "There's no planet B!",
     location: "Hertzel 83, Tel Aviv",
     name: "Join the annual conference and learn what small changes you can make to help our planet.",
     date: Time.now + rand(1..20),
     remote_photo_url: "https://res.cloudinary.com/flameleviosa/image/upload/v1575972830/planetb_mz1krm.jpg",
     )
-end
 
-1.times do
-  Event.create!(
+  ChatRoom.create!(
+    name: "Event Chat Room",
+    event: event_one
+  )
+
+
+puts "made a first event and chatroom"
+
+
+  event_two = Event.create!(
     description: "Clean the butts!",
     location: "Namal Tel Aviv",
     name: "The group who picks up the most cigarette butts wins eternal glory",
     date: Time.now + rand(1..20),
     remote_photo_url: "https://res.cloudinary.com/flameleviosa/image/upload/v1575972028/butts_lrwxj6.jpg",
     )
-end
+  ChatRoom.create!(
+    name: "Event Chat Room",
+    event: event_two
+  )
 
-1.times do
-  Event.create!(
+
+
+  event_three = Event.create!(
     description: "Annual beach clean-up!",
     location: "Jerusalem beach, Tel Aviv",
     name: "Amazing plastic clean-up!",
     date: Time.now + rand(1..20),
     remote_photo_url: "https://res.cloudinary.com/flameleviosa/image/upload/v1575972032/cleanup_ccew7h.jpg",
     )
-end
+  ChatRoom.create!(
+    name: "Event Chat Room",
+    event: event_three
+  )
 
-1.times do
-  Event.create!(
+
+
+  event_four = Event.create!(
     description: "Come join the fight for our Planet!",
     location: "Dizengoff 223, Tel Aviv",
     name: "Youth march for climate change awareness, everyone is invited!",
     date: Time.now + rand(1..20),
     remote_photo_url: "https://res.cloudinary.com/flameleviosa/image/upload/v1575972034/tlvstrike_wxdz0z.png",
     )
-end
+  ChatRoom.create!(
+    name: "Event Chat Room",
+    event: event_four
+  )
+
 
   puts "finished seeding!"
