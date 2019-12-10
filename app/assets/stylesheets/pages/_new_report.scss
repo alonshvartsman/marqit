@@ -231,7 +231,7 @@ font-family:'Source Sans Pro';
 
 .picture_row_2 {
   text-align: center;
-  margin-top: 110px;
+  margin-top: 40px;
 }
 
 .optional_section {
@@ -368,6 +368,13 @@ font-family:'Source Sans Pro';
 .container.profile_image_upload {
   width: auto;
 }
+
+.upload-rep-photo {
+  border-radius: unset !important;
+}
+
+#imagePreview.report-photo-upload {
+ border-radius: 0%;
 
 .review_page {
   display: flex;

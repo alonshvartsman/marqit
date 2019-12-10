@@ -13,12 +13,6 @@ previewImageOnFileSelect();
 displayText();
 
 
-
-
-
-
-
-
 // --------------catagory slection javaScript
 
 const categories = document.querySelectorAll(".report_category");
