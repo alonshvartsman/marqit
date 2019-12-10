@@ -112,8 +112,8 @@ a.mapboxgl-ctrl-logo{
 }
 
 .mapboxgl-popup-close-button {
-  font-size: 18px;
-  color: white;
+  font-size: 0px;
+  color: transparent;
 }
 
 i#thumbsup {
@@ -127,13 +127,13 @@ i#thumbsup {
   cursor: pointer;
 
   &.can-vote:hover {
-    color: #2EBDD1;
+    color: #96DD3B;
     transition: all .2s ease-in-out;
     transform: scale(1.1);
   }
 
   &.can-vote.active {
-    color: #2EBDD1;
+    color: #96DD3B;
   }
 }
 
@@ -143,8 +143,7 @@ i#thumbsup {
 
 }
 
-.footer {
-  background-color: green;
-  width: 100%;
-  height: 16px;
+.card-image {
+  // object-fit: cover;
+  background-size:cover
 }

@@ -105,14 +105,37 @@
           <h3><strong>Add Photo</strong></h3>
           <h5 class="optional_section">(optional)</h5>
         </div>
-        <div class="picture_row_2">
-          <label>
-            <span style="display:none;">
-              <%= f.input :photo, as: :file, input_html: { class: 'd-none'} %>
-            </span>
-            <%= image_tag("icons/camera.svg", :alt => "camera", class: "camera_icon") %>
-          </label>
+
+
+        <div class="container profile_image_upload picture_row_2">
+            <div class="avatar-upload">
+                <div class="avatar-edit">
+                    <label for="photo"><i class="fas fa-camera"></i></label>
+                    <input class="form-control-file file optional" type="file" name="report[photo]" id="photo" accept=".png, .jpg, .jpeg">
+                 <%= f.input :photo, label: false, wrapper_html: { class: 'd-none'} %>
+                 <%= f.input :photo_cache, as: :hidden %>
+                </div>
+                <div class="avatar-preview">
+                    <div id="imagePreview" style="background-image: url(http://gazdaglanguageempire.com/img/profile_placeholder_green.svg);">
+                    </div>
+                </div>
+              </label>
+            </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="description_row_3">
           <h3><strong>Add Description</strong></h3>
           <!-- <textarea rows="6" cols="40" placeholder="(optional)" class="text-box"></textarea> -->

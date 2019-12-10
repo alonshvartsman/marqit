@@ -10,4 +10,11 @@ class AttendancesController < ApplicationController
       render 'events/show'
     end
   end
+
+  def destroy
+    @event = Event.find(params[:id])
+    @attendance = Attendance.find_by(event: @event, user: current_user)
+    @attendance.destroy
+    redirect_to event_path(@event)
+  end
 end
