@@ -5,15 +5,49 @@
 
 .all-events a{
   text-decoration:none;
+
 }
 
 
-.tab-style {
-  margin: 10px;
-  padding-top:10px;
+.tab-style-event {
+  margin: 12px;
+  padding-top:0px;
 }
 
 #events-title {
   font-size: 23px;
   text-align: center
 }
+
+ #right_arrow_event{
+  height: 10px;
+  width: 25px;
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+ }
+
+ #green_spalsh{
+  height: 150px;
+  width: 150px;
+  opacity: 0.2;
+  position: absolute;
+  bottom: -13px;
+  right: -42px;
+ }
+.card-product-infos-events p{
+  font-weight: bolder;
+  font-size: 16px !important;
+}
+.card-product-infos-events h2{
+  font-size: 20px !important;
+  font-weight: bolder;
+}
+.card-product-infos-events{
+  color: black;
+  position: relative;
+}
+.card-product .card-product-infos-events {
+  padding: 16px;
+  }
+
