@@ -1,4 +1,4 @@
  <div class="message <%= message.from?(current_user) ? "right" : "" %>">
-    <%= message.user.photo %>
+    <%=cl_image_tag message.user.photo, class: "messaging-avatar" %>
     <div class="message-content"><%= message.text %></div>
   </div>

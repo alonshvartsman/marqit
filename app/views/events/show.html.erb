@@ -9,26 +9,27 @@
 </div>
 
 <div id="event-show">
-  <%= cl_image_tag @event.photo %>
-  <h2><%= @event.name %></h2>
-  <p><%= @event.description %></p>
+  <h2 class="event-header"><%= @event.description %></h2>
+  <%= cl_image_tag @event.photo, class: "event-picture"%>
+  <p class="event-description"><%= @event.name %></p>
   <h4><%= @event.location %></h4>
   <p><%= @event.date.strftime("%d/%m/%Y at: %I:%M%p") %></p>
   <p>attending:<%= @event.attendances.length %></p>
 
+  <% if @event.attending?(current_user)%>
+    <%= simple_form_for([@event, @attendance]) do |f|%>
+      <%= f.submit class: "next_text attend_button" %>
+    <% end %>
+  <% else %>
+    <div class="unattend_button">
+      <%= link_to "Unattend", attendance_path, method: :delete, data: { confirm: 'Are you sure?'}, class: "next_text" %>
+    </div>
+  <% end %>
 </div>
 <!-- <h1 id="btn-form"> -->
-  <%# if @event.attending?(current_user)%>
-  <div class="unattend_button">
-      <%= link_to "Unattend", attendance_path, method: :delete, data: { confirm: 'Are you sure?'}, class: "next_text" %>
-      </div>
-  <%# else %>
-  <%= simple_form_for([@event, @attendance]) do |f|%>
-    <%= f.submit class: "next_text unattend_button" %>
-  <% end %>
-<%# end %>
 
 
+<div class="chat-header"><h3><%= @chat_room.name %></h3></div>
 <div class="messages-all">
   <div class="message_container">
     <% @chat_room.messages.each do |message| %>
@@ -37,8 +38,10 @@
   </div>
   <div id="create-message">
     <%= simple_form_for [@chat_room, Message.new ], remote: true do |f| %>
-      <%= f.input :text, label: false, input_html: {id: "message_input"} %>
-      <%= f.submit %>
+      <%= f.input :text, label: false, placeholder: "Type here", input_html: {id: "event_message_input"} %>
+      <div class="event_message_submit_div">
+        <%= f.submit "Send message", class: "next_text" %>
+      </div>
     <% end %>
   </div>
 </div>
