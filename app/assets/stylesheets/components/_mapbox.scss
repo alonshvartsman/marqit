@@ -24,7 +24,6 @@ a.mapboxgl-ctrl-logo{
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   position: relative;
   border-bottom: solid 8px #96DD3B;
-
 }
 
 
@@ -36,14 +35,15 @@ a.mapboxgl-ctrl-logo{
 }
 
 .product-tumb img {
-    height: 200px;
-    width: 125px;
+  height: 24vh;
+  width: 19vh;
 }
 
 
 .product-details {
   text-align: left;
   max-height: 200px !important;
+  display: grid;
 }
 
 .product-category {
@@ -57,8 +57,7 @@ a.mapboxgl-ctrl-logo{
   display: flex;
   margin-top: 7px;
   align-items: center;
-  justify-content: space-around;
-
+  float: left;
 }
 
 .product-details h3 {
