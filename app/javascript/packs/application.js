@@ -6,6 +6,7 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { readURL } from '../plugins/avatar_upload';
 import { previewImageOnFileSelect, displayText } from '../plugins/snapshop';
 
+
 initMapbox();
 readURL();
 previewImageOnFileSelect();
