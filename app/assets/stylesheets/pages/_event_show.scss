@@ -1,9 +1,9 @@
 #event-show {
   box-shadow: 2px 5px 9px rgba(0, 0, 0, 0.1);
-  padding: 29px;
+  padding: 29px 28px 12px 29px;
   text-align: center;
-  margin-top: 45px;
   background-color: white;
+  margin-top: 8px;
 }
 
 #btn-form input {
@@ -22,7 +22,44 @@
 
 .unattend_button{
   // margin: auto;
-  margin-top: 10px;
+  margin-top: 8px;
   display: flex;
   justify-content: center;
 }
+
+.event-header{
+  margin-top: -16px;
+  margin-bottom: 10px;
+}
+
+.event-picture {
+  height: 185px;
+  width: 80vw;
+  box-shadow: 10px 9px 9px rgba(0, 0, 0, 0.2);
+}
+
+.event-description {
+  margin-top: 21px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
