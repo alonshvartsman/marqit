@@ -1,11 +1,16 @@
-  <div class="product-card">
-    <div class="product-tumb">
-     <%= cl_image_tag report.photo, class: "card-image" %>
-   </div>
-   <div class="category-top">
-   <div class="product-details ml-2" data-report-id="<%= report.id %>">
+<div class="card">
+  <!-- left -->
+  <div class="card-aside">
+
+    <%= cl_image_tag report.photo, class: "card-image" %>
+
+  </div>
+  <!-- end of left -->
+
+  <!-- right -->
+  <div class="card-main">
     <div class="card-category-organize">
-    <%= case report.category
+      <%= case report.category
       when "Road Block"
         image_tag("icons/road_block.png", class: "icon_image_popup")
       when "Trash"
@@ -22,25 +27,34 @@
         image_tag('icons/broken_light.png', class: "icon_image_popup")
       when "Exterminate"
         image_tag('icons/rat.png', class: "icon_image_popup")
-      end %>
+        end %>
       </div>
-    <h3 class="card-category"><span class="product-category"><%= report.category %></span></h3>
+      <h3 class="card-title"><%= report.category %></h3>
+
+      <p class="card-excerpt">
+        <p class="card-excerpt"><span class="text-topic"></span><%= report.location.match(/(?<address>.*), Tel Aviv/i)[:address] %></p>
+          <% unless report.description == "" %>
+          <p class="card-description"><span class="text-topic">Description: </span><div style="overflow-y: scroll; height:50px; width:120px;"><%= report.description %></div></p>
+          <% end %>
+        </p>
+
+        <!-- down -->
+        <div class="card-meta">
+          <div>
+            <div class="category-flex">
+            </div>
+            <div class="upvotes">
+              <div class="product-upvote" data-report-id="<%= report.id %>" >
+                <span data-report-id="<%= report.id %>" class="upvote_number"><%= report.votes.count %></span>
+              </div>
+              <div class="upvotemachine"><%= link_to vote_up_report_path(report), :method => :post, remote: true do %></div>
+              <i class="fa fa-thumbs-up fa-2x like can-vote" aria-hidden="true"></i>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <!-- end of down -->
+      </div>
+      <!-- end of right -->
+
     </div>
-    <p class="card-address"><span class="text-topic"></span><%= report.location.match(/(?<address>.*), Tel Aviv/i)[:address] %></p>
-    <% unless report.description == "" %>
-    <p class="card-description"><span class="text-topic">Description: </span><div style="overflow-y: scroll; height:50px; width:120px;"><%= report.description %></div></p>
-    <% end %>
-    <div class="category-flex">
-      </div>
-      <div class="upvotes">
-      <div class="product-upvote" data-report-id="<%= report.id %>" >
-        <span data-report-id="<%= report.id %>" class="upvote_number"><%= report.votes.count %></span>
-      </div>
-      <div class="upvotemachine"><%= link_to vote_up_report_path(report), :method => :post, remote: true do %></div>
-        <i class="fa fa-thumbs-up fa-2x like can-vote" aria-hidden="true"></i>
-        <% end %>
-      </div>
-    </div>
- <!--    <div class="footer">
-    </div> -->
-  </div>
