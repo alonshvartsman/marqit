@@ -73,9 +73,9 @@ puts "creating reports for ofir and omri"
 1.times do
   Report.create!(
     user: ofir,
-    description: "A huge pile of trash on the sidewalk",
+    description: "There is a huge pile of trash on the sidewalk. This is not good.",
     location: "Arlozorov 7, Tel Aviv, Israel",
-    remote_photo_url: "https://res.cloudinary.com/flameleviosa/image/upload/v1575981063/trash_czvbri.jpg",
+    remote_photo_url: "https://www.jpost.com/HttpHandlers/ShowImage.ashx?id=293819&w=898&h=628",
     upvote: rand(1..30),
     category: "Trash"
     )
@@ -84,9 +84,9 @@ end
 1.times do
   Report.create!(
     user: omri,
-    description: "A flood! Winter has come in full force this year",
+    description: "Huge puddle in the middle of the road. Very dangerous",
     location: "Hovevey Tzion 103, Tel Aviv, Israel",
-    remote_photo_url: "https://res.cloudinary.com/flameleviosa/image/upload/v1575981063/flood_cdv3su.jpg",
+    remote_photo_url: "https://images.haarets.co.il/image/upload/w_609,h_343,q_auto,c_fill,f_auto/fl_any_format.preserve_transparency.progressive:none/v1544100830/1.6722982.712372222.jpg",
     upvote: rand(1..30),
     category: "Other"
     )
@@ -95,11 +95,77 @@ end
 1.times do
   Report.create!(
     user: ofir,
-    description: "There's a big pothole in the middle of the road",
+    description: "Pothole in the middle of the road",
     location: "Ben Yehuda 32, Tel Aviv, Israel",
-    remote_photo_url: "https://res.cloudinary.com/flameleviosa/image/upload/v1575981063/pothole_x0uxjw.jpg",
+    remote_photo_url: "https://teachengineering.org/content/mis_/activities/mis_potholes/mis_potholes_lesson01_activity1_image1web.jpg",
     upvote: rand(1..30),
     category: "Pothole"
+    )
+end
+
+1.times do
+  Report.create!(
+    user: omri,
+    description: "Large tree blocking the sidewalk and road.",
+    location: "Basel 10, Tel Aviv, Israel",
+    remote_photo_url: "https://images.hamodia.com/hamod-uploads/2014/08/Tree.jpg",
+    upvote: rand(1..30),
+    category: "Road Block"
+    )
+end
+
+1.times do
+  Report.create!(
+    user: ofir,
+    description: "The street light on this corner broke. It doesn't turn green.",
+    location: "Jabotinsky 153, Tel Aviv, Israel",
+    remote_photo_url: "https://nocamels.com/wp-content/uploads/2019/06/yandex-light.jpeg",
+    upvote: rand(1..30),
+    category: "Street Light"
+    )
+end
+
+1.times do
+  Report.create!(
+    user: omri,
+    description: "So much trash it's impossible to pass through. Please help.",
+    location: "Florentin St 13, Tel Aviv, Israel",
+    remote_photo_url: "http://newzim.co.il/mizrah/wp-content/uploads/sites/6/2018/02/%D7%90%D7%9C%D7%A2%D7%93-%D7%93%D7%95%D7%99%D7%93-%D7%9C%D7%9B%D7%9C%D7%95%D7%9A-%D7%91%D7%AA%D7%9C-%D7%90%D7%91%D7%99%D7%91-630x350.jpg",
+    upvote: rand(1..30),
+    category: "Trash"
+    )
+end
+
+1.times do
+  Report.create!(
+    user: ofir,
+    description: "There is a sewer on Dizengoff Center that is spewing out water.",
+    location: "Dizengoff Center, Tel Aviv, Israel",
+    remote_photo_url: "http://www.mcity.co.il/files_media/d92dc0a7fbc95195ae7a112f5cf5b9f4.jpg",
+    upvote: rand(1..30),
+    category: "Sewage"
+    )
+end
+
+1.times do
+  Report.create!(
+    user: ofir,
+    description: "I've been walking by this trash for about 3 days now.",
+    location: "Ibn Gabirol 74, Tel Aviv, Israel",
+    remote_photo_url: "https://www.jpost.com/HttpHandlers/ShowImage.ashx?id=369110",
+    upvote: rand(1..30),
+    category: "Trash"
+    )
+end
+
+1.times do
+  Report.create!(
+    user: omri,
+    description: "Someone broke the window of this store and there is glass everywhere ",
+    location: "Lilienblum 18, Tel Aviv, Gush Dan, Israel",
+    remote_photo_url: "https://www.dccommercialglassdoorsandwindowrepair.com/assets/img/broken%20storefront.jpg",
+    upvote: rand(1..30),
+    category: "Other"
     )
 end
 
