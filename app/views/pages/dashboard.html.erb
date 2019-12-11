@@ -33,7 +33,10 @@
         <div class="card-product-infos">
           <h2> <%= report.description %></h2>
           <p><%= report.category %></p>
-          <p><%= report.upvote %></p>
+          <div class="report-votes-user">
+          <i class="fa fa-thumbs-up" aria-hidden="true" id="userthumbs"></i>
+          <p id="likes-number"><%= report.upvote %></p>
+          </div>
           <p><%= report.location %></p>
         </div>
       </div>

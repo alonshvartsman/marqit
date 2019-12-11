@@ -18,12 +18,12 @@
     <div class="card-product-event">
        <%= cl_image_tag event.photo %>
       <div class="card-product-infos-events">
-        <%= image_tag("greenstroke.png", id: "green_spalsh") %>
+        <%= image_tag("greenstroke.png", id: "green_splash") %>
         <h2> <%= event.description %></h2>
         <p><%= event.name %></p>
         <p><%= event.location %></p>
         <p><%= event.date.strftime("%d/%m/%Y") %></p>
-        <%= image_tag("rightarrow.png", id: "right_arrow_event") %>
+        <i class="fas fa-chevron-circle-right" id="right_arrow_event"></i>
       </div>
     </div>
  </div>
