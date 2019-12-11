@@ -14,17 +14,17 @@
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" id="myreports" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" id="reports-tab" data-toggle="tab" href="#reports" role="tab" aria-controls="reports" aria-selected="true">My Reports</a>
+    <a class="nav-link" id="reports-tab" data-toggle="tab" href="#reports" role="tab" aria-controls="reports" aria-selected="true">My Reports</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="events-tab" data-toggle="tab" href="#events" role="tab" aria-controls="events" aria-selected="false">My Events</a>
+    <a class="nav-link active" id="events-tab" data-toggle="tab" href="#events" role="tab" aria-controls="events" aria-selected="false">My Events</a>
   </li>
 </ul>
 
 <!-- Tab panes -->
 
 <div class="tab-content">
-  <div class="tab-pane active" id="reports" role="tabpanel" aria-labelledby="reports-tab">
+  <div class="tab-pane" id="reports" role="tabpanel" aria-labelledby="reports-tab">
 
       <% @reports.each do |report| %>
     <div class ="tab-style">
@@ -41,7 +41,7 @@
       <% end %>
 </div>
 
-  <div class="tab-pane" id="events" role="tabpanel" aria-labelledby="events-tab">
+  <div class="tab-pane active" id="events" role="tabpanel" aria-labelledby="events-tab">
     <% if @events.empty? %>
     <div class="no_events">
     <p class="no_events_text">You are not attending any events!</p>
