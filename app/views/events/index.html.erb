@@ -8,13 +8,14 @@
   <%= image_tag("icons/close.svg", :alt => "cancel", class: "cancel_icon") %>
   <% end %>
 </div>
-<h1 id="events-title">All The Events In <span class="tel-aviv">Tel Aviv</span></h1>
+<h1 id="events-title">Events</h1>
+<h2 id="tel-aviv">Tel Aviv</h2>
 </div>
 <div class="all-events">
   <% @events.each do |event| %>
   <%= link_to event_path(event) do %>
   <div class ="tab-style-event">
-    <div class="card-product">
+    <div class="card-product-event">
        <%= cl_image_tag event.photo %>
       <div class="card-product-infos-events">
         <%= image_tag("greenstroke.png", id: "green_spalsh") %>

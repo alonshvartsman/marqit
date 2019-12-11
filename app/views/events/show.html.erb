@@ -16,9 +16,9 @@
   <p><%= @event.date.strftime("%d/%m/%Y at: %I:%M%p") %></p>
   <p>attending:<%= @event.attendances.length %></p>
 
-  <% if @event.attending?(current_user)%>
+  <% if current_user.attending?(@event)%>
     <div class="unattend_button">
-      <%= link_to "Unattend", attendance_path, method: :delete, data: { confirm: 'Are you sure?'}, class: "next_text" %>
+      <%= link_to "Unattend", attendance_path, method: :delete, data: { confirm: 'Are you sure you want to Unattend?'}, class: "next_text" %>
     </div>
   <% else %>
     <%= simple_form_for([@event, @attendance]) do |f|%>
