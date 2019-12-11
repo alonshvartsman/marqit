@@ -189,9 +189,11 @@
           <div>
           <h3 class="review_header">Confirm Details</h3>
             <%= image_tag "", width: 300, class: "hidden", id: "photo-preview" %>
-            <div id="review_category"></div>
-            <div id="mapLocation"></div>
-            <div id="target"></div>
+            <div class="info-review-page">
+            <span class="headers-review-page">category: <div id="review_category"></div></span>
+            <span class="headers-review-page">location: <div id="mapLocation"></div></span>
+            <span class="headers-review-page">Description: <div id="target"></div></span>
+            </div>
           </div>
           <div class="create_button_div">
             <%= f.submit class: "create_button" %>

@@ -8,6 +8,8 @@ class Event < ApplicationRecord
   # has_many :users, through: :messages
   mount_uploader :photo, PhotoUploader
 
+  after_create :create_chat_room
+
   def default_picture
     if self.photo.url
       return true
@@ -17,7 +19,7 @@ class Event < ApplicationRecord
     end
   end
 
-  def attending?(user)
-    users.find_by(id: user.id)
+  def create_chat_room
+    ChatRoom.create(event: self)
   end
 end

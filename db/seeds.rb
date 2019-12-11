@@ -136,11 +136,6 @@ puts "creating 4 events"
     remote_photo_url: "https://res.cloudinary.com/flameleviosa/image/upload/v1575972830/planetb_mz1krm.jpg",
     )
 
-  ChatRoom.create!(
-    name: "Event Chat Room",
-    event: event_one
-  )
-
 
 puts "made a first event and chatroom"
 
@@ -152,10 +147,6 @@ puts "made a first event and chatroom"
     date: Time.now + rand(1..20),
     remote_photo_url: "https://res.cloudinary.com/flameleviosa/image/upload/v1575972028/butts_lrwxj6.jpg",
     )
-  ChatRoom.create!(
-    name: "Event Chat Room",
-    event: event_two
-  )
 
 
 
@@ -166,10 +157,6 @@ puts "made a first event and chatroom"
     date: Time.now + rand(1..20),
     remote_photo_url: "https://res.cloudinary.com/flameleviosa/image/upload/v1575972032/cleanup_ccew7h.jpg",
     )
-  ChatRoom.create!(
-    name: "Event Chat Room",
-    event: event_three
-  )
 
 
 
@@ -180,10 +167,6 @@ puts "made a first event and chatroom"
     date: Time.now + rand(1..20),
     remote_photo_url: "https://res.cloudinary.com/flameleviosa/image/upload/v1575972034/tlvstrike_wxdz0z.png",
     )
-  ChatRoom.create!(
-    name: "Event Chat Room",
-    event: event_four
-  )
 
 
   puts "finished seeding!"
