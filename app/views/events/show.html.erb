@@ -14,7 +14,7 @@
   <p class="event-description"><%= @event.name %></p>
   <h4><%= @event.location %></h4>
   <p><%= @event.date.strftime("%d/%m/%Y at: %I:%M%p") %></p>
-  <p>attending:<%= @event.attendances.length + rand(15..50) %></p>
+  <p>attending:<%= @event.attendances.length + 36 %></p>
 
   <% if current_user.attending?(@event)%>
     <div class="unattend_button">
