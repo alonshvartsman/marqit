@@ -1,6 +1,8 @@
 import "bootstrap";
 import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the stylesheet_pack_tag in the layout!
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
+// import { confetti } from "canvas-confetti"
+const confetti = require('canvas-confetti');
 
 import { initMapbox } from '../plugins/init_mapbox';
 import { readURL } from '../plugins/avatar_upload';
@@ -35,3 +37,53 @@ categories.forEach((category) => {
 });
 
 }
+
+
+
+
+const confettiParty = () => {
+
+// myCanvas.style.
+
+
+// confetti()
+
+
+    var myConfetti = confetti.create(myCanvas, { resize: true });
+     myConfetti({
+      spread: 160,
+      particleCount: 200,
+
+      // any other options from the global
+      // confetti function
+    });
+
+
+
+
+  if (Date.now() < document.end) {
+    setTimeout(confettiParty, 2000);
+  }
+
+}
+
+if (document.querySelector(".confirmation-container")) {
+  document.duration = 30 * 1000;
+
+  document.end = Date.now() + document.duration;
+  var myCanvas = document.createElement('canvas');
+  document.querySelector("body").appendChild(myCanvas);
+  confettiParty()
+}
+
+
+
+
+
+
+
+
+
+
+
+

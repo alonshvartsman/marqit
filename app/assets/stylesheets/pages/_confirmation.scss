@@ -65,7 +65,13 @@
 }
 
 
-
+canvas {
+    height: 50vh;
+    width: 100vw;
+    /* z-index: 1; */
+    position: absolute;
+    top: 0;
+}
 
 
 
