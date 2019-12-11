@@ -440,6 +440,8 @@ font-family:'Source Sans Pro';
 }
  #photo-preview{
   margin: 0 auto;
+  height: 300px;
+  object-fit: contain;
  }
 
  .info-review-page{
