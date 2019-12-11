@@ -10,4 +10,8 @@ class PagesController < ApplicationController
       redirect_to new_user_session
     end
   end
+
+  def help
+
+  end
 end

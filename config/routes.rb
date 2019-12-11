@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-  get 'messages/new'
-  get 'messages/update'
-  get 'new/update'
   devise_for :users
   get 'dashboard', to: "pages#dashboard"
+  get 'help', to: "pages#help"
   root to: 'reports#index'
   resources :reports, only: %i[create new index destroy] do
     member do
