@@ -32,7 +32,7 @@
       <h3 class="card-title"><%= report.category %></h3>
 
       <p class="card-excerpt">
-        <p class="card-excerpt"><span class="text-topic"></span><%= report.location.match(/(?<address>.*), Tel Aviv/i)[:address] %></p>
+        <p class="card-excerpt"><span class="text-topic"></span><%= report.location.match(/(?<address>.*), Israel/i)[:address] %></p>
           <% unless report.description == "" %>
           <p class="card-description"><span class="text-topic">Description: </span><div style="overflow-y: scroll; height:50px; width:120px;"><%= report.description %></div></p>
           <% end %>
