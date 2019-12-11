@@ -16,8 +16,4 @@ class Event < ApplicationRecord
       self.save
     end
   end
-
-  def attending?(user)
-    users.find_by(id: user.id)
-  end
 end
