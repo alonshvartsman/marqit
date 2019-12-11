@@ -16,6 +16,7 @@
   <p><%= @event.date.strftime("%d/%m/%Y at: %I:%M%p") %></p>
   <p>attending:<%= @event.attendances.length + 36 %></p>
 
+
   <% if current_user.attending?(@event)%>
     <div class="unattend_button">
       <%= link_to "Unattend", attendance_path(@attendance), method: :delete, data: { confirm: 'Are you sure you want to Unattend?'}, class: "next_text" %>

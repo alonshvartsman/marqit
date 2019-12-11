@@ -73,7 +73,7 @@ puts "creating reports for ofir and omri"
 1.times do
   Report.create!(
     user: ofir,
-    description: "There is a huge pile of trash on the sidewalk. This is not good.",
+    description: "There is a huge pile of trash on the sidewalk. Not good.",
     location: "Arlozorov 7, Tel Aviv, Israel",
     remote_photo_url: "https://www.jpost.com/HttpHandlers/ShowImage.ashx?id=293819&w=898&h=628",
     upvote: rand(1..30),
@@ -161,7 +161,7 @@ end
 1.times do
   Report.create!(
     user: omri,
-    description: "Someone broke the window of this store and there is glass everywhere ",
+    description: "Someone broke the window and there is glass everywhere ",
     location: "Lilienblum 18, Tel Aviv, Gush Dan, Israel",
     remote_photo_url: "https://www.dccommercialglassdoorsandwindowrepair.com/assets/img/broken%20storefront.jpg",
     upvote: rand(1..30),
@@ -198,7 +198,7 @@ puts "creating 4 events"
   event_one = Event.create!(
     description: "There's No Planet B!",
     location: "Hertzel 83, Tel Aviv, Israel",
-    name: "Join the annual conference and learn what small changes you can make to help our planet.",
+    name: "Join and learn about all the small changes you can make.",
     date: Time.now + rand(1..20),
     remote_photo_url: "https://res.cloudinary.com/flameleviosa/image/upload/v1575972830/planetb_mz1krm.jpg",
     )
@@ -210,7 +210,7 @@ puts "made a first event and chatroom"
   event_two = Event.create!(
     description: "Clean the Butts!",
     location: "Namal Tel Aviv, Israel",
-    name: "By cleaning up our home and involving the community, we are creating the change we want to see in our city.",
+    name: "Let's create the change we want to see in our city.",
     date: Time.now + rand(1..20),
     remote_photo_url: "https://res.cloudinary.com/flameleviosa/image/upload/v1575972028/butts_lrwxj6.jpg",
     )
@@ -220,7 +220,7 @@ puts "made a first event and chatroom"
   event_three = Event.create!(
     description: "Annual Beach Clean-up!",
     location: "Jerusalem beach, Tel Aviv, Israel",
-    name: " For over six years, more than 10,000 volunteers have collected over 1 million pounds of trash.",
+    name: "More than 10,000 volunteers have collected over 1 million pounds of trash.",
     date: Time.now + rand(1..20),
     remote_photo_url: "https://res.cloudinary.com/flameleviosa/image/upload/v1575972032/cleanup_ccew7h.jpg",
     )
