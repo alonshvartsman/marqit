@@ -25,7 +25,7 @@
 
 <div class="tab-content">
   <div class="tab-pane" id="reports" role="tabpanel" aria-labelledby="reports-tab">
-
+      <% @reports = @reports.sort_by(&:created_at).reverse  %>
       <% @reports.each do |report| %>
     <div class ="tab-style">
       <div class="card-product">
@@ -33,11 +33,14 @@
         <div class="card-product-infos">
           <h2> <%= report.description %></h2>
           <p><%= report.category %></p>
+
           <div class="report-votes-user">
           <i class="fa fa-thumbs-up" aria-hidden="true" id="userthumbs"></i>
           <p id="likes-number"><%= report.upvote %></p>
           </div>
+
           <p><%= report.location %></p>
+          <p><%= report.upvote %></p>
         </div>
       </div>
     </div>
