@@ -43,16 +43,16 @@ const fitMapToMarkers = (map, markers) => {
   map.fitBounds(bounds, { padding: 70, maxZoom: 12, duration: 1500 });
 };
 
-const addGeolocateControl = (map) => {
-  map.addControl(
-    new mapboxgl.GeolocateControl({
-      positionOptions: {
-        enableHighAccuracy: true
-      },
-    trackUserLocation: true
-    })
-  );
-}
+// const addGeolocateControl = (map) => {
+//   map.addControl(
+//     new mapboxgl.GeolocateControl({
+//       positionOptions: {
+//         enableHighAccuracy: true
+//       },
+//     trackUserLocation: true
+//     })
+//   );
+// }
 
 const onDragEnd = () => {
    // reverse geocode

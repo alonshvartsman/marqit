@@ -9,6 +9,12 @@
 
 <%= render "shared/navbar-report" %>
 
-<div class="marqit_text">
+<div class="marqit-logo">
   <%= image_tag("iconmarqit2.png", :alt => "logo") %>
+</div>
+
+<div class="help-button">
+  <%= link_to '/help' do %>
+    <%= image_tag("question.png", class: "question-mark-icon") %>
+  <% end %>
 </div>
