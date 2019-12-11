@@ -18,4 +18,8 @@ class User < ApplicationRecord
   #     current_user.save
   #   end
   # end
+
+  def attending?(event)
+    events.include?(event)
+  end
 end

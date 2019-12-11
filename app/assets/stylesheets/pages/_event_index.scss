@@ -15,8 +15,17 @@
 }
 
 #events-title {
-  font-size: 23px;
-  text-align: center
+  font-size: 36px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#tel-aviv{
+  color:#96DD3B;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bolder;
+
 }
 
  #right_arrow_event{
@@ -28,26 +37,60 @@
  }
 
  #green_spalsh{
-  height: 150px;
+  height: 182px;
   width: 150px;
   opacity: 0.2;
   position: absolute;
   bottom: -13px;
-  right: -42px;
+  right: -53px;
  }
 .card-product-infos-events p{
   font-weight: bolder;
-  font-size: 16px !important;
+  color: black;
+  font-size: 14px !important;
 }
 .card-product-infos-events h2{
-  font-size: 20px !important;
+  font-size: 16px !important;
   font-weight: bolder;
 }
 .card-product-infos-events{
   color: black;
-  position: relative;
+  // position: relative;
 }
-.card-product .card-product-infos-events {
+.card-product-event .card-product-infos-events {
   padding: 16px;
   }
+
+
+.card-product-event {
+  overflow: hidden;
+  height: 10rem;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  text-decoration:none;
+  position: relative;
+}
+
+.card-product-event img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product-event h2 {
+  font-size: 16px;
+  font-weight: bolder;
+  margin: 0;
+}
+
+.card-product-event p {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: .8;
+  margin-bottom: 0;
+  margin-top: 8px;
+  font-weight: bolder;
+}
 
