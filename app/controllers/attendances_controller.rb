@@ -7,9 +7,6 @@ class AttendancesController < ApplicationController
     # render 'events/show' if @attendance.save
     if @attendance.save
       redirect_to event_path(@event)
-    else
-
-      raise
     end
   end
 
