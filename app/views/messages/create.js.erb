@@ -2,7 +2,7 @@
 <% else %>
   var messageList = document.querySelector('.message_container');
   messageList.insertAdjacentHTML('beforeend', "<%= j render 'messages/message', message: @message %>")
-  var input = document.querySelector('#message_input');
+  var input = document.querySelector('#event_message_input');
   input.value = '';
   input.blur();
 <% end %>
