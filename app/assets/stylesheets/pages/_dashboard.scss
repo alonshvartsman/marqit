@@ -105,3 +105,16 @@
   font-weight: bolder;
   font-size: 29px;
 }
+
+.report-votes-user {
+  display: flex;
+  align-items: center;
+}
+
+p#likes-number {
+  margin-left: 6px;
+}
+
+i#userthumbs {
+  margin-top: 3px;
+}

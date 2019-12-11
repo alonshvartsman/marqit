@@ -8,6 +8,8 @@ class Event < ApplicationRecord
   # has_many :users, through: :messages
   mount_uploader :photo, PhotoUploader
 
+  after_create :create_chat_room
+
   def default_picture
     if self.photo.url
       return true
@@ -15,5 +17,9 @@ class Event < ApplicationRecord
       self.photo = File.open(File.join(".", "app/assets/images/green-tel -aviv.jpeg"))
       self.save
     end
+  end
+
+  def create_chat_room
+    ChatRoom.create(event: self)
   end
 end

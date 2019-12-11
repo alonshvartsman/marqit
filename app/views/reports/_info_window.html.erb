@@ -1,15 +1,11 @@
 <div class="card">
-  <!-- left -->
   <div class="card-aside">
 
     <%= cl_image_tag report.photo, class: "card-image" %>
 
   </div>
-  <!-- end of left -->
-
-  <!-- right -->
   <div class="card-main">
-    <div class="card-category-organize">
+    <div class="card-category-organize d-flex">
       <%= case report.category
       when "Road Block"
         image_tag("icons/road_block.png", class: "icon_image_popup")
@@ -28,33 +24,22 @@
       when "Exterminate"
         image_tag('icons/rat.png', class: "icon_image_popup")
         end %>
+        <h3 class="card-title"><%= report.category %></h3>
       </div>
-      <h3 class="card-title"><%= report.category %></h3>
-
-      <p class="card-excerpt">
-        <p class="card-excerpt"><span class="text-topic"></span><%= report.location.match(/(?<address>.*), Israel/i)[:address] %></p>
-          <% unless report.description == "" %>
-          <p class="card-description"><span class="text-topic">Description: </span><div style="overflow-y: scroll; height:50px; width:120px;"><%= report.description %></div></p>
-          <% end %>
-        </p>
-
-        <!-- down -->
-        <div class="card-meta">
-          <div>
-            <div class="category-flex">
-            </div>
-            <div class="upvotes">
-              <div class="product-upvote" data-report-id="<%= report.id %>" >
+      <p class="card-excerpt"><%= report.location.match(/(?<address>.*), Israel/i)[:address] %></p>
+        <% unless report.description == "" %>
+        <p class="card-description"><%= report.description %></p>
+        <% end %>
+        <div class="upvotes">
+          <div class="container">
+            <button class="like__btn animated">
+              <div class="upvotemachine"><%= link_to vote_up_report_path(report), :method => :post, remote: true do %></div>
+              <i class="like__icon fa fa-thumbs-up fa-2x like can-vote" aria-hidden="true"></i>
+              <% end %>
+              <div class="product-upvote like__number" data-report-id="<%= report.id %>" >
                 <span data-report-id="<%= report.id %>" class="upvote_number"><%= report.votes.count %></span>
               </div>
-              <div class="upvotemachine"><%= link_to vote_up_report_path(report), :method => :post, remote: true do %></div>
-              <i class="fa fa-thumbs-up fa-2x like can-vote" aria-hidden="true"></i>
-              <% end %>
-            </div>
+            </button>
           </div>
         </div>
-        <!-- end of down -->
       </div>
-      <!-- end of right -->
-
-    </div>
