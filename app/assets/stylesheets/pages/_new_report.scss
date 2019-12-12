@@ -259,10 +259,9 @@ font-family:'Source Sans Pro';
 
 .next_button_2 a{
   text-decoration: none;
+  margin-top: -34px;
 }
-
 // --------------------------------page 3
-
 
 #input-description-box {
   width: 328px;
@@ -296,12 +295,10 @@ font-family:'Source Sans Pro';
   justify-content: center;
 }
 
-
 ////////////avatar upload on signup///////////////////
 .profile_image_upload {
 
 }
-
 .avatar-upload {
   position: relative;
   max-width: 205px;
@@ -429,9 +426,8 @@ font-family:'Source Sans Pro';
   font-size:25px;
 }
 
- .confimation-sub-header {
+.confimation-sub-header {
   font-family: 'Josefin Sans';
-
  }
 
 .confirmation-header {
@@ -444,10 +440,10 @@ font-family:'Source Sans Pro';
   object-fit: contain;
  }
 
- .info-review-page{
+.info-review-page{
   text-align: left;
  }
- .headers-review-page{
+.headers-review-page{
   font-size: 24px;
   font-weight: bold;
   opacity: .6;
