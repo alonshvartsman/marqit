@@ -14,7 +14,7 @@
   <p class="event-description"><%= @event.name %></p>
   <h4><%= @event.location %></h4>
   <p><%= @event.date.strftime("%d/%m/%Y at: %I:%M%p") %></p>
-  <p>attending:<%= @event.attendances.length + 36 %></p>
+  <p>Attending: <%= @event.attendances.length + 36 %></p>
 
 
   <% if current_user.attending?(@event)%>
